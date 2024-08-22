@@ -254,7 +254,8 @@
       ]
     },
     {
-      "quizSubject": "Bootstrap",
+      "title": "Bootstrap",
+      "icon": "./assets/images/icon-bootstrap.svg",
       "questions": [
         {
           "question": "What is Bootstrap?",
