@@ -3,4 +3,5 @@
   flex-direction: column;
   gap: 20px;
   background-color: transparent;
+  list-style: none;
 }
