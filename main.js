@@ -1,8 +1,10 @@
 import QuizMenu from "./components/QuizMenu";
 import ProgressBar from "./components/ProgressBar";
 import "./style.css";
+import ColorModeSwitch from "./components/ColorModeSwitch";
 
-document
-  .querySelector("#app")
-  .appendChild(QuizMenu())
-  .appendChild(ProgressBar(50));
+const app = document.querySelector("#app");
+
+app.appendChild(ColorModeSwitch(false));
+app.appendChild(QuizMenu());
+app.appendChild(ProgressBar(50));
