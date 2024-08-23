@@ -7,11 +7,22 @@ import darkMoon from "../assets/images/icon-moon-dark.svg";
 import "./ColorModeSwitch.css";
 
 function ColorModeSwitch(isDarkMode) {
-  return `<div class='color-mode-switch'>
-    <img src='${isDarkMode ? lightSun : darkSun}'>${Switch()}<img src='${
-    isDarkMode ? lightMoon : darkMoon
-  }'>
-  </div>`;
+  const div = document.createElement('div');
+  div.className = 'color-mode-switch';
+
+  const sunImg = document.createElement('img');
+  sunImg.src = isDarkMode ? lightSun : darkSun;
+
+  const switchComponent = Switch(); 
+
+  const moonImg = document.createElement('img');
+  moonImg.src = isDarkMode ? lightMoon : darkMoon;
+
+  div.appendChild(sunImg);
+  div.appendChild(switchComponent);
+  div.appendChild(moonImg);
+
+  return div;
 }
 
 export default ColorModeSwitch;

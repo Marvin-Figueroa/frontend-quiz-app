@@ -1,10 +1,19 @@
 import "./Switch.css";
 
 function Switch() {
-  return `<label class="switch">
-  <input type="checkbox">
-  <span class="slider round"></span>
-</label>`;
+  const label = document.createElement("label");
+  label.className = "switch";
+
+  const input = document.createElement("input");
+  input.type = "checkbox";
+
+  const span = document.createElement("span");
+  span.className = "slider round";
+
+  label.appendChild(input);
+  label.appendChild(span);
+
+  return label;
 }
 
 export default Switch;
