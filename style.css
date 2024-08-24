@@ -23,9 +23,12 @@
   --slate-blue: #313e51;
   --steel-blue: #3c4c67;
   --purple: #a729f5;
+  --light-purple: #ffe9ff;
   --white: #fff;
   --cloud-white: #f4f6fa;
   --shadow-blue: #626c7f;
+  --green: #26d782;
+  --red: #ee5454;
 
   --html-bg-color: #fff1e9;
   --css-bg-color: #e0fdef;
@@ -46,13 +49,14 @@ html {
 }
 
 body {
+  padding: 30px;
   font-family: "Rubik", sans-serif;
   font-weight: 400;
   box-sizing: border-box;
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100vh;
+  min-height: 150vh;
   background-color: var(--cloud-white);
 }
 
@@ -60,6 +64,5 @@ body {
   display: flex;
   flex-direction: column;
   gap: 30px;
-  width: 400px;
-  height: 90%;
+  width: 500px;
 }
