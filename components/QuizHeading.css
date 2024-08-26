@@ -1,0 +1,23 @@
+.quiz-heading {
+  font-size: 6rem;
+}
+
+.light-mode .quiz-heading {
+  color: var(--slate-blue);
+}
+
+.dark-mode .quiz-heading {
+  color: var(--white);
+}
+
+.quiz-heading__normal {
+  font-weight: 400;
+  text-wrap: nowrap;
+  display: block;
+}
+
+.quiz-heading__highlight {
+  font-weight: bold;
+  text-wrap: nowrap;
+  display: block;
+}
