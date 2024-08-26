@@ -1,13 +1,15 @@
-/* src/components/Button.css */
 .btn {
-    background-color: var(--purple);
-    color: var(--white);
-    padding: 10px 20px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-}
+  background-color: var(--purple);
+  color: var(--white);
+  font-size: 2rem;
+  padding: 20px;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  font-family: inherit;
+  font-weight: 500;
 
-.btn:hover {
-    background-color: #C74CFF;
+  &:hover {
+    background-color: #c74cff;
+  }
 }

@@ -1,13 +1,12 @@
-// components/Button.js
+import "./Button.css";
 
-// Componente reutilizable para el botón
 function Button(text) {
-    const button = document.createElement("button");
-    button.className = "btn";
-    button.textContent = text;
+  const button = document.createElement("button");
+  button.id = `btn-${text.toLowerCase().split(" ").join("-")}`;
+  button.className = "btn";
+  button.textContent = text;
 
-    // Retorna el elemento del botón
-    return button;
+  return button;
 }
 
 export default Button;
