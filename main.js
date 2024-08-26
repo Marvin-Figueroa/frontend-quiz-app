@@ -3,6 +3,7 @@ import ProgressBar from "./components/ProgressBar";
 import ColorModeSwitch from "./components/ColorModeSwitch";
 import AnswersMenu from "./components/AnswersMenu";
 import QuizScore from "./components/QuizScore";
+import Button from "./components/Button";
 import QuizTopic from "./components/QuizTopic";
 
 import data from "./data/data.json";
@@ -17,6 +18,7 @@ app.appendChild(QuizMenu());
 app.appendChild(ProgressBar(50));
 app.appendChild(AnswersMenu(htmlFirstQuestion));
 app.appendChild(QuizScore(4));
+app.appendChild(Button("Submit Answer"));
 app.appendChild(QuizTopic(data.quizzes[0].title, data.quizzes[0].icon));
 app.appendChild(QuizTopic(data.quizzes[1].title, data.quizzes[1].icon));
 app.appendChild(QuizTopic(data.quizzes[2].title, data.quizzes[2].icon));
@@ -44,3 +46,4 @@ answers.forEach((answer, index) =>
     }
   })
 );
+no
