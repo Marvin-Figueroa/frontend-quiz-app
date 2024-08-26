@@ -1,0 +1,20 @@
+.quiz-score {
+  font-size: 14rem;
+  font-weight: 500;
+}
+
+.very-low {
+  color: var(--red);
+}
+
+.low {
+  color: var(--orange);
+}
+
+.middle {
+  color: var(--yellow);
+}
+
+.high {
+  color: var(--green);
+}
