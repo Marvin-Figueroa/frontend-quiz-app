@@ -6,6 +6,7 @@ import QuizScore from "./components/QuizScore";
 import Button from "./components/Button";
 import QuizTopic from "./components/QuizTopic";
 import QuizResult from "./components/QuizResult";
+import QuizHeading from "./components/QuizHeading";
 
 import data from "./data/data.json";
 
@@ -26,6 +27,8 @@ app.appendChild(QuizTopic(data.quizzes[2].title, data.quizzes[2].icon));
 app.appendChild(QuizTopic(data.quizzes[3].title, data.quizzes[3].icon));
 app.appendChild(QuizResult(data.quizzes[0], 7, 10));
 app.appendChild(QuizResult(data.quizzes[3], 9, 10));
+app.appendChild(QuizHeading("Welcome to the", "Frontend Quiz!"));
+app.appendChild(QuizHeading("Quiz Completed", "You scored..."));
 
 // El siguiente codigo es solo para evidenciar los diferentes estados de cada
 // elemento de respuesta (hover, focus, eleccion correcta, eleccion incorrecta).
