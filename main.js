@@ -4,6 +4,7 @@ import ColorModeSwitch from "./components/ColorModeSwitch";
 import AnswersMenu from "./components/AnswersMenu";
 import QuizScore from "./components/QuizScore";
 import Button from "./components/Button";
+import QuizTopic from "./components/QuizTopic";
 
 import data from "./data/data.json";
 
@@ -18,6 +19,10 @@ app.appendChild(ProgressBar(50));
 app.appendChild(AnswersMenu(htmlFirstQuestion));
 app.appendChild(QuizScore(4));
 app.appendChild(Button("Submit Answer"));
+app.appendChild(QuizTopic(data.quizzes[0].title, data.quizzes[0].icon));
+app.appendChild(QuizTopic(data.quizzes[1].title, data.quizzes[1].icon));
+app.appendChild(QuizTopic(data.quizzes[2].title, data.quizzes[2].icon));
+app.appendChild(QuizTopic(data.quizzes[3].title, data.quizzes[3].icon));
 
 // El siguiente codigo es solo para evidenciar los diferentes estados de cada
 // elemento de respuesta (hover, focus, eleccion correcta, eleccion incorrecta).
@@ -29,13 +34,13 @@ answers.forEach((answer, index) =>
   answer.addEventListener("click", (e) => {
     if (index === 0) {
       e.target.closest("button").querySelector(".answer__icon").src =
-        "./assets/images/icon-correct.svg";
+        "/images/icon-correct.svg";
 
       e.target.closest("button").classList.add("correct");
     }
     if (index === 1) {
       e.target.closest("button").querySelector(".answer__icon").src =
-        "./assets/images/icon-incorrect.svg";
+        "/images/icon-incorrect.svg";
 
       e.target.closest("button").classList.add("incorrect");
     }

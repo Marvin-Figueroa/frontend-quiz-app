@@ -1,0 +1,23 @@
+.quiz-topic {
+  display: flex;
+  align-items: center;
+  gap: 25px;
+  font-family: inherit;
+  font-weight: bold;
+
+  img {
+    width: 50px;
+  }
+}
+
+.quiz-topic__text {
+  font-size: 2.6rem;
+}
+
+.light-mode .quiz-topic__text {
+  color: var(--slate-blue);
+}
+
+.dark-mode .quiz-topic__text {
+  color: var(--white);
+}
