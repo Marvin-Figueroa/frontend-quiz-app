@@ -1,55 +1,72 @@
 import QuizMenu from "./components/QuizMenu";
-import ProgressBar from "./components/ProgressBar";
 import ColorModeSwitch from "./components/ColorModeSwitch";
-import AnswersMenu from "./components/AnswersMenu";
-import QuizScore from "./components/QuizScore";
-import Button from "./components/Button";
-import QuizTopic from "./components/QuizTopic";
-import QuizResult from "./components/QuizResult";
 import QuizHeading from "./components/QuizHeading";
-
-import data from "./data/data.json";
 
 import "./style.css";
 
-const app = document.querySelector("#app");
-const htmlFirstQuestion = data.quizzes[0].questions[0];
+// Función para crear un elemento con clase
+function createElementWithClass(tag, className) {
+  const element = document.createElement(tag);
+  element.className = className;
+  return element;
+}
 
-app.appendChild(ColorModeSwitch(false));
-app.appendChild(QuizMenu());
-app.appendChild(ProgressBar(50));
-app.appendChild(AnswersMenu(htmlFirstQuestion));
-app.appendChild(QuizScore(4));
-app.appendChild(Button("Submit Answer"));
-app.appendChild(QuizTopic(data.quizzes[0].title, data.quizzes[0].icon));
-app.appendChild(QuizTopic(data.quizzes[1].title, data.quizzes[1].icon));
-app.appendChild(QuizTopic(data.quizzes[2].title, data.quizzes[2].icon));
-app.appendChild(QuizTopic(data.quizzes[3].title, data.quizzes[3].icon));
-app.appendChild(QuizResult(data.quizzes[0], 7, 10));
-app.appendChild(QuizResult(data.quizzes[3], 9, 10));
-app.appendChild(QuizHeading("Welcome to the", "Frontend Quiz!"));
-app.appendChild(QuizHeading("Quiz Completed", "You scored..."));
+// Función para crear el encabezado
+function createHeader(isDarkMode) {
+  const header = createElementWithClass("header", "app-header");
+  header.appendChild(ColorModeSwitch(isDarkMode));
+  return header;
+}
 
-// El siguiente codigo es solo para evidenciar los diferentes estados de cada
-// elemento de respuesta (hover, focus, eleccion correcta, eleccion incorrecta).
-// Ignorar la transicion brusca en el estado focus (de purpura a rojo o verde).
+// Función para crear la sección de preguntas
+function createQuestionsSection() {
+  const section = createElementWithClass("section", "questions-section");
+  const quizHeading = QuizHeading("Welcome to the", "Frontend Quiz!");
+  const subHeading = document.createElement("p");
+  subHeading.textContent = "Pick a subject to get started.";
+  section.appendChild(quizHeading);
+  section.appendChild(subHeading);
+  return section;
+}
 
-const answers = document.querySelectorAll(".answer");
+// Función para crear la sección de respuestas
+function createAnswersSection() {
+  const section = createElementWithClass("section", "answers-section");
+  const quizMenu = QuizMenu();
+  section.appendChild(quizMenu);
+  return section;
+}
 
-answers.forEach((answer, index) =>
-  answer.addEventListener("click", (e) => {
-    if (index === 0) {
-      e.target.closest("button").querySelector(".answer__icon").src =
-        "/images/icon-correct.svg";
+// Función para crear el contenedor principal
+function createMainContent() {
+  const container = createElementWithClass("div", "main-content");
+  const questionsSection = createQuestionsSection();
+  const answersSection = createAnswersSection();
+  container.appendChild(questionsSection);
+  container.appendChild(answersSection);
+  return container;
+}
 
-      e.target.closest("button").classList.add("correct");
-    }
-    if (index === 1) {
-      e.target.closest("button").querySelector(".answer__icon").src =
-        "/images/icon-incorrect.svg";
+// Función principal para inicializar la aplicación
+function initApp() {
+  const app = document.querySelector("#app");
 
-      e.target.closest("button").classList.add("incorrect");
-    }
-  })
-);
-no;
+  const header = createHeader(false);
+  const main = createElementWithClass("main", "app-main");
+  const mainContent = createMainContent();
+
+  main.appendChild(mainContent);
+  app.appendChild(header);
+  app.appendChild(main);
+
+  // Agregar eventos a los botones del menú
+  const quizMenuButtons = document.querySelectorAll(".quiz-menu__btn");
+  quizMenuButtons.forEach((button) =>
+    button.addEventListener("click", () => {
+      console.log(`Let's start the ${button.textContent} Quiz`);
+    })
+  );
+}
+
+// Inicializar la aplicación
+initApp();
