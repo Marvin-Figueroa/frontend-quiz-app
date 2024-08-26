@@ -2,6 +2,7 @@ import QuizMenu from "./components/QuizMenu";
 import ProgressBar from "./components/ProgressBar";
 import ColorModeSwitch from "./components/ColorModeSwitch";
 import AnswersMenu from "./components/AnswersMenu";
+import QuizScore from "./components/QuizScore";
 
 import data from "./data/data.json";
 
@@ -14,6 +15,7 @@ app.appendChild(ColorModeSwitch(false));
 app.appendChild(QuizMenu());
 app.appendChild(ProgressBar(50));
 app.appendChild(AnswersMenu(htmlFirstQuestion));
+app.appendChild(QuizScore(4));
 
 // El siguiente codigo es solo para evidenciar los diferentes estados de cada
 // elemento de respuesta (hover, focus, eleccion correcta, eleccion incorrecta).
