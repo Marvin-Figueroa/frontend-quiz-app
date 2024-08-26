@@ -1,0 +1,28 @@
+.quiz-menu__img-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 8px;
+  padding: 10px;
+
+  img {
+    border-radius: 5px;
+    width: 35px;
+  }
+}
+
+.html-icon {
+  background-color: var(--html-bg-color);
+}
+
+.css-icon {
+  background-color: var(--css-bg-color);
+}
+
+.javascript-icon {
+  background-color: var(--javascript-bg-color);
+}
+
+.bootstrap-icon {
+  background-color: var(--bootstrap-bg-color);
+}
