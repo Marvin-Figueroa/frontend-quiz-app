@@ -3,6 +3,7 @@ import ProgressBar from "./components/ProgressBar";
 import ColorModeSwitch from "./components/ColorModeSwitch";
 import AnswersMenu from "./components/AnswersMenu";
 import QuizScore from "./components/QuizScore";
+import Button from "./components/Button";
 
 import data from "./data/data.json";
 
@@ -16,6 +17,7 @@ app.appendChild(QuizMenu());
 app.appendChild(ProgressBar(50));
 app.appendChild(AnswersMenu(htmlFirstQuestion));
 app.appendChild(QuizScore(4));
+app.appendChild(Button("Submit Answer"));
 
 // El siguiente codigo es solo para evidenciar los diferentes estados de cada
 // elemento de respuesta (hover, focus, eleccion correcta, eleccion incorrecta).
@@ -39,3 +41,4 @@ answers.forEach((answer, index) =>
     }
   })
 );
+no
