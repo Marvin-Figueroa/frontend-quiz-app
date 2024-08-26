@@ -21,3 +21,9 @@
   text-wrap: nowrap;
   display: block;
 }
+
+@media (max-width: 1024px) {
+  .quiz-heading {
+    font-size: 4rem;
+  }
+}
