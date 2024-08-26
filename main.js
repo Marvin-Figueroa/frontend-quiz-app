@@ -27,13 +27,13 @@ answers.forEach((answer, index) =>
   answer.addEventListener("click", (e) => {
     if (index === 0) {
       e.target.closest("button").querySelector(".answer__icon").src =
-        "./assets/images/icon-correct.svg";
+        "/images/icon-correct.svg";
 
       e.target.closest("button").classList.add("correct");
     }
     if (index === 1) {
       e.target.closest("button").querySelector(".answer__icon").src =
-        "./assets/images/icon-incorrect.svg";
+        "/images/icon-incorrect.svg";
 
       e.target.closest("button").classList.add("incorrect");
     }

@@ -1,6 +1,7 @@
 import QuizMenuItem from "./QuizMenuItem";
-import data from "/data/data.json";
 import "./QuizMenu.css";
+
+import data from "/data/data.json";
 
 function QuizMenu() {
   const ul = document.createElement("ul");
