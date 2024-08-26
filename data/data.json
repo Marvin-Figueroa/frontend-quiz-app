@@ -1,0 +1,338 @@
+{
+  "quizzes": [
+    {
+      "title": "HTML",
+      "icon": "./assets/images/icon-html.svg",
+      "questions": [
+        {
+          "question": "What does HTML stand for?",
+          "options": [
+            "Hyper Trainer Marking Language",
+            "Hyper Text Marketing Language",
+            "Hyper Text Markup Language",
+            "Hyper Text Markup Leveler"
+          ],
+          "answer": 2
+        },
+        {
+          "question": "Which of the following is the correct structure for an HTML document?",
+          "options": [
+            "<html><head></head><body></body></html>",
+            "<head><html></html><body></body></head>",
+            "<body><head></head><html></html></body>",
+            "<html><body></body><head></head></html>"
+          ],
+          "answer": 0
+        },
+        {
+          "question": "Which HTML element is used to define the title of a document?",
+          "options": ["<head>", "<title>", "<header>", "<top>"],
+          "answer": 1
+        },
+        {
+          "question": "What is the purpose of the <body> tag in HTML?",
+          "options": [
+            "It defines the document's head section.",
+            "It contains all the content such as text, images, and links.",
+            "It is used to define the main content of an HTML document.",
+            "It specifies the body of the email content in HTML."
+          ],
+          "answer": 1
+        },
+        {
+          "question": "Which HTML tag is used to create a hyperlink?",
+          "options": ["<hyperlink>", "<link>", "<a>", "<href>"],
+          "answer": 2
+        },
+        {
+          "question": "Which tag is used to display images in HTML?",
+          "options": ["<img>", "<image>", "<src>", "<pic>"],
+          "answer": 0
+        },
+        {
+          "question": "What attribute is used to provide the path of an image in the <img> tag?",
+          "options": ["link", "src", "href", "url"],
+          "answer": 1
+        },
+        {
+          "question": "Which HTML tag is used to create an unordered list?",
+          "options": ["<ul>", "<ol>", "<list>", "<li>"],
+          "answer": 0
+        },
+        {
+          "question": "What does the <br> tag do?",
+          "options": [
+            "It breaks the text into two sections.",
+            "It creates a bold text.",
+            "It inserts a line break.",
+            "It adds a new row in a table."
+          ],
+          "answer": 2
+        },
+        {
+          "question": "In HTML, what does the `fieldset` tag do?",
+          "options": [
+            "It is used to group related data in a form.",
+            "It sets the field to a fixed size.",
+            "It automatically validates the fields within a form.",
+            "It hides the fields in a form."
+          ],
+          "answer": 0
+        }
+      ]
+    },
+    {
+      "title": "CSS",
+      "icon": "./assets/images/icon-css.svg",
+      "questions": [
+        {
+          "question": "What does CSS stand for?",
+          "options": [
+            "Colorful Style Sheets",
+            "Computer Style Sheets",
+            "Cascading Style Sheets",
+            "Creative Style Sheets"
+          ],
+          "answer": 2
+        },
+        {
+          "question": "Which HTML attribute is used to define inline styles?",
+          "options": ["styles", "style", "class", "font-style"],
+          "answer": 1
+        },
+        {
+          "question": "How do you insert a comment in a CSS file?",
+          "options": [
+            "// this is a comment //",
+            "/* this is a comment */",
+            "-- this is a comment --",
+            "<!-- this is a comment -->"
+          ],
+          "answer": 1
+        },
+        {
+          "question": "Which property is used to change the background color of an element?",
+          "options": ["color", "bgcolor", "background-color", "background"],
+          "answer": 2
+        },
+        {
+          "question": "How do you apply a style to all <p> elements?",
+          "options": ["p { }", ".p { }", "#p { }", "all.p { }"],
+          "answer": 0
+        },
+        {
+          "question": "Which property is used to change the font of an element?",
+          "options": ["font-style", "text-style", "font-family", "typeface"],
+          "answer": 2
+        },
+        {
+          "question": "How do you make each word in a text start with a capital letter?",
+          "options": [
+            "text-transform: capitalize",
+            "text-transform: uppercase",
+            "text-style: capital",
+            "font-transform: capitalize"
+          ],
+          "answer": 0
+        },
+        {
+          "question": "How do you select an element with the class name 'header'?",
+          "options": [".header", "#header", "header", "*header"],
+          "answer": 0
+        },
+        {
+          "question": "What is the default value of the 'position' property?",
+          "options": ["relative", "fixed", "absolute", "static"],
+          "answer": 3
+        },
+        {
+          "question": "What is the purpose of the z-index property in CSS?",
+          "options": [
+            "To count the number of elements",
+            "To set the magnification level of an element",
+            "To specify the stack order of an element",
+            "To create a zoom effect"
+          ],
+          "answer": 2
+        }
+      ]
+    },
+    {
+      "title": "JavaScript",
+      "icon": "./assets/images/icon-js.svg",
+      "questions": [
+        {
+          "question": "Which syntax is correct to output 'Hello World' in an alert box?",
+          "options": [
+            "alertBox('Hello World');",
+            "msg('Hello World');",
+            "alert('Hello World');",
+            "msgBox('Hello World');"
+          ],
+          "answer": 2
+        },
+        {
+          "question": "How do you call a function named 'myFunction'?",
+          "options": [
+            "call function myFunction()",
+            "call myFunction()",
+            "myFunction()",
+            "execute myFunction()"
+          ],
+          "answer": 2
+        },
+        {
+          "question": "How to write an IF statement in JavaScript?",
+          "options": ["if i = 5 then", "if (i == 5)", "if i == 5", "if i = 5"],
+          "answer": 1
+        },
+        {
+          "question": "How to write an IF statement for executing some code if 'i' is NOT equal to 5?",
+          "options": [
+            "if (i <> 5)",
+            "if i =! 5 then",
+            "if (i != 5)",
+            "if i not = 5"
+          ],
+          "answer": 2
+        },
+        {
+          "question": "How does a FOR loop start?",
+          "options": [
+            "for (i = 0; i <= 5)",
+            "for i = 1 to 5",
+            "for (i <= 5; i++)",
+            "for (i = 0; i <= 5; i++)"
+          ],
+          "answer": 3
+        },
+        {
+          "question": "How can you add a comment in a JavaScript?",
+          "options": [
+            "'This is a comment",
+            "//This is a comment",
+            "<!--This is a comment-->",
+            "/* This is a comment */"
+          ],
+          "answer": 1
+        },
+        {
+          "question": "What is the correct way to write a JavaScript array?",
+          "options": [
+            "const colors = (1:'red', 2:'green', 3:'blue')",
+            "const colors = ['red', 'green', 'blue']",
+            "let colors = 'red', 'green', 'blue'",
+            "var colors = 1 = ('red'), 2 = ('green'), 3 = ('blue')"
+          ],
+          "answer": 1
+        },
+        {
+          "question": "How do you find the number with the highest value of x and y?",
+          "options": [
+            "Math.ceil(x, y)",
+            "top(x, y)",
+            "Math.max(x, y)",
+            "Math.highest(x, y)"
+          ],
+          "answer": 2
+        },
+        {
+          "question": "Which operator is used to assign a value to a variable?",
+          "options": ["-", "*", "=", "x"],
+          "answer": 2
+        },
+        {
+          "question": "What is the correct way to write a JavaScript object?",
+          "options": [
+            "var person = {firstName: 'John', lastName: 'Doe'};",
+            "var person = {firstName = 'John', lastName = 'Doe'};",
+            "var person = (firstName: 'John', lastName: 'Doe');",
+            "var person = (firstName = 'John', lastName = 'Doe');"
+          ],
+          "answer": 0
+        }
+      ]
+    },
+    {
+      "title": "Bootstrap",
+      "icon": "./assets/images/icon-bootstrap.svg",
+      "questions": [
+        {
+          "question": "What is Bootstrap?",
+          "options": [
+            "A CSS framework",
+            "A programming language",
+            "A database",
+            "A web server"
+          ],
+          "correctAnswer": 0
+        },
+        {
+          "question": "Which class is used to center text in Bootstrap?",
+          "options": [
+            "text-center",
+            "center-text",
+            "align-center",
+            "text-align-center"
+          ],
+          "correctAnswer": 0
+        },
+        {
+          "question": "Which Bootstrap class is used for a primary button?",
+          "options": ["btn-primary", "btn-main", "btn-default", "btn-first"],
+          "correctAnswer": 0
+        },
+        {
+          "question": "How do you define a row in Bootstrap?",
+          "options": ["row", "container", "col", "line"],
+          "correctAnswer": 0
+        },
+        {
+          "question": "Which class makes an image responsive in Bootstrap?",
+          "options": [
+            "img-fluid",
+            "img-responsive",
+            "responsive-img",
+            "img-adaptable"
+          ],
+          "correctAnswer": 0
+        },
+        {
+          "question": "Which class adds padding to an element in Bootstrap?",
+          "options": ["p-3", "pad-3", "padding-3", "space-3"],
+          "correctAnswer": 0
+        },
+        {
+          "question": "Which Bootstrap class is used to create a navbar?",
+          "options": ["navbar", "navigation-bar", "nav-bar", "navbar-menu"],
+          "correctAnswer": 0
+        },
+        {
+          "question": "How do you create a column that spans 6 out of 12 parts in Bootstrap?",
+          "options": ["col-6", "col-md-6", "col-half", "column-6"],
+          "correctAnswer": 0
+        },
+        {
+          "question": "Which class is used to hide an element on small screens in Bootstrap?",
+          "options": [
+            "d-none d-sm-block",
+            "hidden-sm",
+            "hide-xs",
+            "invisible-xs"
+          ],
+          "correctAnswer": 0
+        },
+        {
+          "question": "Which class is used to align items horizontally in Bootstrap flexbox?",
+          "options": [
+            "justify-content-center",
+            "align-items-center",
+            "center-horizontal",
+            "horizontal-align"
+          ],
+          "correctAnswer": 0
+        }
+      ]
+    }
+  ]
+}

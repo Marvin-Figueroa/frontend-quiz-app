@@ -1,24 +1,41 @@
-import './style.css'
-import javascriptLogo from './javascript.svg'
-import viteLogo from '/vite.svg'
-import { setupCounter } from './counter.js'
+import QuizMenu from "./components/QuizMenu";
+import ProgressBar from "./components/ProgressBar";
+import ColorModeSwitch from "./components/ColorModeSwitch";
+import AnswersMenu from "./components/AnswersMenu";
+import QuizScore from "./components/QuizScore";
 
-document.querySelector('#app').innerHTML = `
-  <div>
-    <a href="https://vitejs.dev" target="_blank">
-      <img src="${viteLogo}" class="logo" alt="Vite logo" />
-    </a>
-    <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript" target="_blank">
-      <img src="${javascriptLogo}" class="logo vanilla" alt="JavaScript logo" />
-    </a>
-    <h1>Hello Vite!</h1>
-    <div class="card">
-      <button id="counter" type="button"></button>
-    </div>
-    <p class="read-the-docs">
-      Click on the Vite logo to learn more
-    </p>
-  </div>
-`
+import data from "./data/data.json";
 
-setupCounter(document.querySelector('#counter'))
+import "./style.css";
+
+const app = document.querySelector("#app");
+const htmlFirstQuestion = data.quizzes[0].questions[0];
+
+app.appendChild(ColorModeSwitch(false));
+app.appendChild(QuizMenu());
+app.appendChild(ProgressBar(50));
+app.appendChild(AnswersMenu(htmlFirstQuestion));
+app.appendChild(QuizScore(4));
+
+// El siguiente codigo es solo para evidenciar los diferentes estados de cada
+// elemento de respuesta (hover, focus, eleccion correcta, eleccion incorrecta).
+// Ignorar la transicion brusca en el estado focus (de purpura a rojo o verde).
+
+const answers = document.querySelectorAll(".answer");
+
+answers.forEach((answer, index) =>
+  answer.addEventListener("click", (e) => {
+    if (index === 0) {
+      e.target.closest("button").querySelector(".answer__icon").src =
+        "./assets/images/icon-correct.svg";
+
+      e.target.closest("button").classList.add("correct");
+    }
+    if (index === 1) {
+      e.target.closest("button").querySelector(".answer__icon").src =
+        "./assets/images/icon-incorrect.svg";
+
+      e.target.closest("button").classList.add("incorrect");
+    }
+  })
+);
