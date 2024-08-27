@@ -61,12 +61,12 @@ body {
 
 body.light-mode {
   background-color: var(--cloud-white);
-  background-image: url("images/pattern-background-desktop-light.svg");
+  background-image: url("/images/pattern-background-desktop-light.svg");
 }
 
 body.dark-mode {
   background-color: var(--slate-blue);
-  background-image: url("images/pattern-background-desktop-dark.svg");
+  background-image: url("/images/pattern-background-desktop-dark.svg");
 }
 
 #app {
@@ -138,11 +138,11 @@ body.dark-mode {
   }
 
   body.light-mode {
-    background-image: url("images/pattern-background-tablet-light.svg");
+    background-image: url("/images/pattern-background-tablet-light.svg");
   }
 
   body.dark-mode {
-    background-image: url("images/pattern-background-tablet-dark.svg");
+    background-image: url("/images/pattern-background-tablet-dark.svg");
   }
 }
 
@@ -152,11 +152,11 @@ body.dark-mode {
   }
 
   body.light-mode {
-    background-image: url("images/pattern-background-mobile-light.svg");
+    background-image: url("/images/pattern-background-mobile-light.svg");
   }
 
   body.dark-mode {
-    background-image: url("images/pattern-background-mobile-dark.svg");
+    background-image: url("/images/pattern-background-mobile-dark.svg");
   }
 
   .main-content {
