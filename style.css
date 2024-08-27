@@ -54,14 +54,19 @@ body {
   font-family: "Rubik", sans-serif;
   font-weight: 400;
   box-sizing: border-box;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
 }
 
 body.light-mode {
   background-color: var(--cloud-white);
+  background-image: url("images/pattern-background-desktop-light.svg");
 }
 
 body.dark-mode {
   background-color: var(--slate-blue);
+  background-image: url("images/pattern-background-desktop-dark.svg");
 }
 
 #app {
@@ -126,7 +131,34 @@ body.dark-mode {
   gap: 3rem;
 }
 
+@media (max-width: 1024px) {
+  body {
+    background-position: top left;
+    background-size: 50%;
+  }
+
+  body.light-mode {
+    background-image: url("images/pattern-background-tablet-light.svg");
+  }
+
+  body.dark-mode {
+    background-image: url("images/pattern-background-tablet-dark.svg");
+  }
+}
+
 @media (max-width: 768px) {
+  body {
+    background-size: cover;
+  }
+
+  body.light-mode {
+    background-image: url("images/pattern-background-mobile-light.svg");
+  }
+
+  body.dark-mode {
+    background-image: url("images/pattern-background-mobile-dark.svg");
+  }
+
   .main-content {
     flex-direction: column;
   }
