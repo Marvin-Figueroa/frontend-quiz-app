@@ -42,17 +42,32 @@ function startQuiz(quizName) {
   derecho (un section con la clase 'answers-section') como ultimo hijo de este, y como hermano del componente que agrego William (el de las opciones de respuesta). El boton inicialmente mostrara el texto 'Submit Answer'. 
   
   */
+
+  import "./Button.css";
+
+// Definimos la función Button
+function Button(text) {
+  const button = document.createElement("button");
+  button.id = `btn-${text.toLowerCase().split(" ").join("-")}`;
+  button.className = "btn";
+  button.textContent = text;
+  return button;
 }
 
-function renderProgressBar() {
-  if (!progressBar) {
-    progressBar = ProgressBar(0);
-    document.querySelector(".questions-section").appendChild(progressBar);
-  }
-  updateProgressBar();
+// Función para crear y añadir el botón al documento
+function createAndAddButton(text) {
+  const newButton = Button(text);
+  document.body.appendChild(newButton);
+  console.log(`Botón "${text}" creado y añadido al documento.`);
 }
 
-function updateProgressBar() {
+// Llamamos a la función una sola vez cuando el DOM esté listo
+document.addEventListener('DOMContentLoaded', () => {
+  createAndAddButton("Submit answer");
+});
+
+}
+progressBar() {
   // Calcula el porcentaje basado en la cantidad de preguntas actuales.
   const totalQuestions = currentQuiz.questions.length;
   const percentage = ((currentQuestion + 1) / totalQuestions) * 100;
