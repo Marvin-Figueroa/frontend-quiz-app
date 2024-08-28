@@ -114,6 +114,14 @@ body.dark-mode {
     font-size: 2rem;
     font-weight: 400;
   }
+
+  .progress-bar {
+    margin-top: auto;
+  }
+}
+
+.quiz-started .questions-section {
+  padding-bottom: 60px;
 }
 
 .light-mode .questions-section p {
