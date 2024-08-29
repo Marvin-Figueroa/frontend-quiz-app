@@ -5,7 +5,7 @@
       "icon": "/images/icon-html.svg",
       "questions": [
         {
-          "question": "What does HTML stand for?",
+          "question": "¿Qué significa HTML?",
           "options": [
             "Hyper Trainer Marking Language",
             "Hyper Text Marketing Language",
@@ -15,7 +15,7 @@
           "answer": 2
         },
         {
-          "question": "Which of the following is the correct structure for an HTML document?",
+          "question": "¿Cuál de las siguientes es la estructura correcta para un documento HTML?",
           "options": [
             "<html><head></head><body></body></html>",
             "<head><html></html><body></body></head>",
@@ -30,52 +30,52 @@
           "answer": 1
         },
         {
-          "question": "What is the purpose of the <body> tag in HTML?",
+          "question": "¿Cuál es el propósito de la etiqueta <body> en HTML?",
           "options": [
-            "It defines the document's head section.",
-            "It contains all the content such as text, images, and links.",
-            "It is used to define the main content of an HTML document.",
-            "It specifies the body of the email content in HTML."
+            "Define la sección de encabezado del documento.",
+            "Contiene todo el contenido, como texto, imágenes y enlaces.",
+            "Se utiliza para definir el contenido principal de un documento HTML.",
+            "Especifica el cuerpo del contenido del correo electrónico en HTML."
           ],
           "answer": 1
         },
         {
-          "question": "Which HTML tag is used to create a hyperlink?",
+          "question": "¿Qué etiqueta HTML se utiliza para crear un hipervínculo?",
           "options": ["<hyperlink>", "<link>", "<a>", "<href>"],
           "answer": 2
         },
         {
-          "question": "Which tag is used to display images in HTML?",
+          "question": "¿Qué etiqueta se utiliza para mostrar imágenes en HTML?",
           "options": ["<img>", "<image>", "<src>", "<pic>"],
           "answer": 0
         },
         {
-          "question": "What attribute is used to provide the path of an image in the <img> tag?",
+          "question": "¿Qué atributo se utiliza para proporcionar la ruta de una imagen en la etiqueta <img>?",
           "options": ["link", "src", "href", "url"],
           "answer": 1
         },
         {
-          "question": "Which HTML tag is used to create an unordered list?",
+          "question": "¿Qué etiqueta HTML se utiliza para crear una lista desordenada?",
           "options": ["<ul>", "<ol>", "<list>", "<li>"],
           "answer": 0
         },
         {
-          "question": "What does the <br> tag do?",
+          "question": "¿Qué hace la etiqueta <br>?",
           "options": [
-            "It breaks the text into two sections.",
-            "It creates a bold text.",
-            "It inserts a line break.",
-            "It adds a new row in a table."
+            "Divide el texto en dos secciones.",
+            "Crea un texto en negrita.",
+            "Inserta un salto de línea.",
+            "Agrega una nueva fila en una tabla."
           ],
           "answer": 2
         },
         {
-          "question": "In HTML, what does the `fieldset` tag do?",
+          "question": "En HTML, ¿qué hace la etiqueta `fieldset`?",
           "options": [
-            "It is used to group related data in a form.",
-            "It sets the field to a fixed size.",
-            "It automatically validates the fields within a form.",
-            "It hides the fields in a form."
+            "Se utiliza para agrupar datos relacionados en un formulario.",
+            "Establece un tamaño fijo para el campo.",
+            "Valida automáticamente los campos dentro de un formulario.",
+            "Oculta los campos en un formulario."
           ],
           "answer": 0
         }
@@ -86,7 +86,7 @@
       "icon": "/images/icon-css.svg",
       "questions": [
         {
-          "question": "What does CSS stand for?",
+          "question": "¿Qué significa CSS?",
           "options": [
             "Colorful Style Sheets",
             "Computer Style Sheets",
@@ -96,37 +96,37 @@
           "answer": 2
         },
         {
-          "question": "Which HTML attribute is used to define inline styles?",
+          "question": "¿Qué atributo HTML se utiliza para definir estilos en línea?",
           "options": ["styles", "style", "class", "font-style"],
           "answer": 1
         },
         {
-          "question": "How do you insert a comment in a CSS file?",
+          "question": "",
           "options": [
-            "// this is a comment //",
-            "/* this is a comment */",
-            "-- this is a comment --",
-            "<!-- this is a comment -->"
+            "// Este es un comentario //",
+            "/* Este es un comentario */",
+            "--  Este es un comentario--",
+            "<!-- -->"
           ],
           "answer": 1
         },
         {
-          "question": "Which property is used to change the background color of an element?",
+          "question": "¿Qué propiedad se utiliza para cambiar el color de fondo de un elemento?",
           "options": ["color", "bgcolor", "background-color", "background"],
           "answer": 2
         },
         {
-          "question": "How do you apply a style to all <p> elements?",
+          "question": "¿Cómo seleccionar un elemento con el nombre de clase 'header'?",
           "options": ["p { }", ".p { }", "#p { }", "all.p { }"],
           "answer": 0
         },
         {
-          "question": "Which property is used to change the font of an element?",
+          "question": "¿Qué propiedad se utiliza para cambiar la fuente de un elemento?",
           "options": ["font-style", "text-style", "font-family", "typeface"],
           "answer": 2
         },
         {
-          "question": "How do you make each word in a text start with a capital letter?",
+          "question": "¿Cómo hacer que cada palabra de un texto comience con mayúscula?",
           "options": [
             "text-transform: capitalize",
             "text-transform: uppercase",
@@ -136,17 +136,17 @@
           "answer": 0
         },
         {
-          "question": "How do you select an element with the class name 'header'?",
+          "question": "¿Cómo seleccionar un elemento con el nombre de clase 'header'?",
           "options": [".header", "#header", "header", "*header"],
           "answer": 0
         },
         {
-          "question": "What is the default value of the 'position' property?",
+          "question": "¿Cuál es el valor predeterminado de la propiedad 'posición'?",
           "options": ["relative", "fixed", "absolute", "static"],
           "answer": 3
         },
         {
-          "question": "What is the purpose of the z-index property in CSS?",
+          "question": "¿Cuál es el propósito de la propiedad z-index en CSS?",
           "options": [
             "To count the number of elements",
             "To set the magnification level of an element",
@@ -162,7 +162,7 @@
       "icon": "/images/icon-js.svg",
       "questions": [
         {
-          "question": "Which syntax is correct to output 'Hello World' in an alert box?",
+          "question": "¿Qué sintaxis es correcta para mostrar 'Hola mundo' en un cuadro de alerta?",
           "options": [
             "alertBox('Hello World');",
             "msg('Hello World');",
@@ -172,7 +172,7 @@
           "answer": 2
         },
         {
-          "question": "How do you call a function named 'myFunction'?",
+          "question": "¿Qué sintaxis es correcta para mostrar 'Hola mundo' en un cuadro de alerta?",
           "options": [
             "call function myFunction()",
             "call myFunction()",
@@ -182,12 +182,12 @@
           "answer": 2
         },
         {
-          "question": "How to write an IF statement in JavaScript?",
+          "question": "¿Cómo escribir una declaración IF en JavaScript?",
           "options": ["if i = 5 then", "if (i == 5)", "if i == 5", "if i = 5"],
           "answer": 1
         },
         {
-          "question": "How to write an IF statement for executing some code if 'i' is NOT equal to 5?",
+          "question": "¿Cómo escribir una declaración IF para ejecutar algún código si 'i' NO es igual a 5?",
           "options": [
             "if (i <> 5)",
             "if i =! 5 then",
@@ -197,7 +197,7 @@
           "answer": 2
         },
         {
-          "question": "How does a FOR loop start?",
+          "question": "¿Cómo se inicia un bucle FOR?",
           "options": [
             "for (i = 0; i <= 5)",
             "for i = 1 to 5",
@@ -207,17 +207,17 @@
           "answer": 3
         },
         {
-          "question": "How can you add a comment in a JavaScript?",
+          "question": "¿Cómo puedes agregar un comentario en un JavaScript?",
           "options": [
-            "'This is a comment",
-            "//This is a comment",
-            "<!--This is a comment-->",
-            "/* This is a comment */"
+            "Este es un comentario",
+            "// Este es un comentario //",
+            "<!-- Este es un comentario -->",
+            "/*  Este es un comentario*/"
           ],
           "answer": 1
         },
         {
-          "question": "What is the correct way to write a JavaScript array?",
+          "question": "Cuál es la forma correcta de escribir un array en JavaScript?",
           "options": [
             "const colors = (1:'red', 2:'green', 3:'blue')",
             "const colors = ['red', 'green', 'blue']",
@@ -227,7 +227,7 @@
           "answer": 1
         },
         {
-          "question": "How do you find the number with the highest value of x and y?",
+          "question": "Cómo encuentras el número con el valor más alto entre x e y?",
           "options": [
             "Math.ceil(x, y)",
             "top(x, y)",
@@ -237,12 +237,12 @@
           "answer": 2
         },
         {
-          "question": "Which operator is used to assign a value to a variable?",
+          "question": "Qué operador se usa para asignar un valor a una variable?",
           "options": ["-", "*", "=", "x"],
           "answer": 2
         },
         {
-          "question": "What is the correct way to write a JavaScript object?",
+          "question": "Cuál es la forma correcta de escribir un objeto en JavaScript?",
           "options": [
             "var person = {firstName: 'John', lastName: 'Doe'};",
             "var person = {firstName = 'John', lastName = 'Doe'};",
@@ -258,17 +258,19 @@
       "icon": "/images/icon-bootstrap.svg",
       "questions": [
         {
-          "question": "What is Bootstrap?",
+          "question": "Qué es Bootstrap?",
           "options": [
-            "A CSS framework",
-            "A programming language",
-            "A database",
-            "A web server"
+            "Un framework de CSS",
+            "Un lenguaje de programación",
+            "Una base de datos",
+            "Un servidor web"
+            
+        
           ],
           "correctAnswer": 0
         },
         {
-          "question": "Which class is used to center text in Bootstrap?",
+          "question": "Qué clase se usa para centrar texto en Bootstrap?",
           "options": [
             "text-center",
             "center-text",
@@ -278,17 +280,17 @@
           "correctAnswer": 0
         },
         {
-          "question": "Which Bootstrap class is used for a primary button?",
+          "question": "Qué clase de Bootstrap se usa para un botón primario?",
           "options": ["btn-primary", "btn-main", "btn-default", "btn-first"],
           "correctAnswer": 0
         },
         {
-          "question": "How do you define a row in Bootstrap?",
+          "question": "Cómo se define una fila en Bootstrap?",
           "options": ["row", "container", "col", "line"],
           "correctAnswer": 0
         },
         {
-          "question": "Which class makes an image responsive in Bootstrap?",
+          "question": "Qué clase hace que una imagen sea responsive en Bootstrap?",
           "options": [
             "img-fluid",
             "img-responsive",
@@ -298,22 +300,22 @@
           "correctAnswer": 0
         },
         {
-          "question": "Which class adds padding to an element in Bootstrap?",
+          "question": "Qué clase añade padding a un elemento en Bootstrap?",
           "options": ["p-3", "pad-3", "padding-3", "space-3"],
           "correctAnswer": 0
         },
         {
-          "question": "Which Bootstrap class is used to create a navbar?",
+          "question": "Qué clase de Bootstrap se usa para crear una barra de navegación?",
           "options": ["navbar", "navigation-bar", "nav-bar", "navbar-menu"],
           "correctAnswer": 0
         },
         {
-          "question": "How do you create a column that spans 6 out of 12 parts in Bootstrap?",
+          "question": "Cómo creas una columna que ocupe 6 de 12 partes en Bootstrap?",
           "options": ["col-6", "col-md-6", "col-half", "column-6"],
           "correctAnswer": 0
         },
         {
-          "question": "Which class is used to hide an element on small screens in Bootstrap?",
+          "question": "Qué clase se usa para ocultar un elemento en pantallas pequeñas en Bootstrap?",
           "options": [
             "d-none d-sm-block",
             "hidden-sm",
@@ -323,7 +325,7 @@
           "correctAnswer": 0
         },
         {
-          "question": "Which class is used to align items horizontally in Bootstrap flexbox?",
+          "question": "Qué clase se usa para ocultar un elemento en pantallas pequeñas en Bootstrap?",
           "options": [
             "justify-content-center",
             "align-items-center",

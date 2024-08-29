@@ -99,12 +99,12 @@ body.dark-mode {
   width: 100%;
   display: flex;
   justify-content: space-between;
-  gap: 5rem;
+  gap: 8rem;
 }
 
 .questions-section {
   min-height: 100%;
-  flex-basis: 50%;
+  flex-basis: 45%;
   display: flex;
   flex-direction: column;
   gap: 4rem;
