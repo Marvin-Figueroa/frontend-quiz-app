@@ -2,16 +2,39 @@ import QuizMenu from "./components/QuizMenu";
 import ColorModeSwitch from "./components/ColorModeSwitch";
 import QuizHeading from "./components/QuizHeading";
 import ProgressBar from "./components/ProgressBar";
+import AnswerMenu from "./components/AnswersMenu";
 
 import { quizzes } from "./data/data.json";
 
 import "./style.css";
+import { mapAnswerOptionToNumber } from "./utils/answerOptions";
 
 let currentQuiz;
-let currentQuestion = 5;
+let currentQuestion = 0;
 let progressBar;
 let score = 0;
 let selectedAnswer;
+
+function renderAnswerOptions() {
+  const answersSection = document.querySelector(".answers-section");
+  const quizMenu = answersSection.querySelector(".quiz-menu");
+
+  // Genera el nuevo menú de respuestas en memoria
+  const answersMenu = AnswerMenu(currentQuiz.questions[currentQuestion]);
+
+  // Reemplaza solo el menú de respuestas, preservando otros elementos
+  answersSection.replaceChild(answersMenu, quizMenu);
+
+  // Añade eventos a los botones de respuesta
+  const answersButtons = answersMenu.querySelectorAll(".answer__btn");
+
+  answersButtons.forEach((button) =>
+    button.addEventListener("click", () => {
+      selectedAnswer = mapAnswerOptionToNumber(button.id[button.id.length - 1]);
+      console.log("You chose answer option: ", selectedAnswer);
+    })
+  );
+}
 
 // Función para crear el contenedor de preguntas
 function createQuestionContainer() {
@@ -65,6 +88,8 @@ function startQuiz(quizName) {
 
   // Reemplaza el contenido de la sección de preguntas
   replaceQuestionsSection(questionContainer);
+
+  renderAnswerOptions();
 
   renderProgressBar();
 }
