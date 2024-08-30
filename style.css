@@ -133,7 +133,7 @@ body.dark-mode {
 }
 
 .answers-section {
-  flex-basis: 50%;
+  flex-basis: 45%;
   display: flex;
   flex-direction: column;
   gap: 3rem;
@@ -169,5 +169,10 @@ body.dark-mode {
 
   .main-content {
     flex-direction: column;
+    gap: 60px;
+  }
+
+  .quiz-started .main-content {
+    gap: 0;
   }
 }
