@@ -7,56 +7,23 @@ import { quizzes } from "./data/data.json";
 
 import "./style.css";
 
-/* Agrego estas variables 'globales' que nos ayudaran con la logica del quiz, son libres de agregar 
-cualquier otra que consideren necesaria para sus tareas */
 let currentQuiz;
 let currentQuestion = 0;
 let progressBar;
 let score = 0;
 let selectedAnswer;
 
-// En esta funcion generaremos la interfaz inicial del quiz elegido.
-// Cada uno llamara a la funcion que creo para que se renderice su componente
-function startQuiz(textContentName,quizName) {
-  
+function startQuiz(textContentName, quizName) {
   currentQuiz = quizzes.find((quiz) => quiz.title === quizName);
   document.body.classList.add("quiz-started");
 
-  //Ocupo el indice en vez del objeto para agilizar la consulta y porque el texto del componente cambia
-  const quizIndex = quizzes.findIndex(quiz => quiz.title === textContentName);   
+  const quizIndex = quizzes.findIndex((quiz) => quiz.title === textContentName);
 
-  /* Alejandra invoca a su funcion renderQuizTopic() y el componente con el icono y titulo del quuiz actual
-  aparece en el header al lado izquierdo del componente switch (modo claro/oscuro), el cual ya se encuentra
-  renderizado */
+  renderProgressBar();
 
-  renderProgressBar(); /* Marvin invoca a su funcion renderProgressBar() y aparece la barra con el 10% de avance 
-   correspondiente a la pregunta 1, segun se avance a las siguientes preguntas la barra se ira llenando mas */
-
-  /* William invoca a su funcion renderAnswersMenu() y el componente AnswersMenu aparece al lado derecho 
-   del contenedor central, sustituyendo al componente QuizMenu que previamente estaba ahi. El  componente
-   inicialmente muestra las opciones de respuesta correspondientes a la pregunta actual, segun se avance a la 
-   siguiente pregunta, estas opciones deben ir cambiando */
-
-  /* Rafael invoca a su funcion renderQuestion() y notara que no hay un componente para esto
-   ya que tiene que renderizar el mensaje 'Question x of y' y abajito renderizar la pregunta actual (los cuales iran cambiando conforme se avance a las siguientes preguntas), para
-   lo cual debe sustituir el contenido que hay en ese elemento (el titulo 'Welcome to the Frontend Quiz!
-   y el subtitulo 'Pick a subject to get started.') */  
-  
-   
-  
-    // Aquí va la primera pregunta
-   
-      //Defino mediante quizIndex cual quiz es elegido, sino lo encuentra valido que no haga el renderQuestion
-      if (quizIndex !== -1) {
-        // Aquí va la primera pregunta
-        renderQuestion(quizIndex, 0);
-      }  
-     
-
-  /* Alguien mas invoca a su funcion renderButton()  y el componente Button aparece a final del contenedor
-  derecho (un section con la clase 'answers-section') como ultimo hijo de este, y como hermano del componente que agrego William (el de las opciones de respuesta). El boton inicialmente mostrara el texto 'Submit Answer'. 
-  */
-
+  if (quizIndex !== -1) {
+    renderQuestion(quizIndex, 0);
+  }
 }
 
 // Función para crear y añadir el botón al documento
@@ -65,6 +32,7 @@ function createAndAddButton(text) {
   document.body.appendChild(renderButton);
   console.log(`Botón "${text}" creado y añadido al documento.`);
 }
+
 // Función para mostrar las preguntas del quiz
 function renderQuestion(quizIndex, questionIndex) {
   const quizData = quizzes[quizIndex];
@@ -78,7 +46,9 @@ function renderQuestion(quizIndex, questionIndex) {
   const subHeading = document.querySelector("p");
 
   // Mostramos el número de la pregunta en la que vamos
-  subHeading.textContent = `Pregunta ${questionIndex + 1} de ${quizData.questions.length}: ${selectedAnswer.question}`;
+  subHeading.textContent = `Pregunta ${questionIndex + 1} de ${
+    quizData.questions.length
+  }: ${selectedAnswer.question}`;
 
   // Actualizar las opciones de respuesta en los botones
   const quizMenuItems = document.querySelectorAll(".quiz-menu__btn");
@@ -104,37 +74,36 @@ function renderQuestion(quizIndex, questionIndex) {
     }
   });
 
-// TODO: HICE ESTE CODIGO PARA PROBAR SI MUESTRA LAS DEMÁS OPCIONES Y LA PREGUNTA SIGUIENTE PERO HABRÁ QUE QUITARLO PARA DAR PASO AL BOTÓN
+  // TODO: HICE ESTE CODIGO PARA PROBAR SI MUESTRA LAS DEMÁS OPCIONES Y LA PREGUNTA SIGUIENTE PERO HABRÁ QUE QUITARLO PARA DAR PASO AL BOTÓN
 
-quizMenuItems.forEach((item, index) => {
-  item.onclick = () => {
-    if (index === selectedAnswer.answer) {
-      console.log("Correcto, pero no te confíes, éste quiz te va a vencer ¡Ya verás!");
-    } else {
-      console.log("Falso, con f de ¡Te falta ácido fólico!");
-    }
+  quizMenuItems.forEach((item, index) => {
+    item.onclick = () => {
+      if (index === selectedAnswer.answer) {
+        console.log(
+          "Correcto, pero no te confíes, éste quiz te va a vencer ¡Ya verás!"
+        );
+      } else {
+        console.log("Falso, con f de ¡Te falta ácido fólico!");
+      }
 
-    // Si hay más preguntas, mostrar la siguiente
-    if (questionIndex < quizData.questions.length - 1) {
-      
-      //Esta sería el código de la próxima pregunta reutilizo renderQuestion ya que solo se incrementa en uno el indice de la pregunta
-      renderQuestion(quizIndex,questionIndex+1)
-
-    }
-    //Aqui puede ir el render del final del quiz con un else
-  };
-}); 
+      // Si hay más preguntas, mostrar la siguiente
+      if (questionIndex < quizData.questions.length - 1) {
+        //Esta sería el código de la próxima pregunta reutilizo renderQuestion ya que solo se incrementa en uno el indice de la pregunta
+        renderQuestion(quizIndex, questionIndex + 1);
+      }
+      //Aqui puede ir el render del final del quiz con un else
+    };
+  });
 }
 
 //TODO: No logré activar la funcionalidad del progressBar con el renderQuestion
 function renderProgressBar() {
-if (!progressBar) {
-  progressBar = ProgressBar(0);
-  document.querySelector(".questions-section").appendChild(progressBar);
+  if (!progressBar) {
+    progressBar = ProgressBar(0);
+    document.querySelector(".questions-section").appendChild(progressBar);
+  }
+  updateProgressBar();
 }
-updateProgressBar();
-}
-
 
 function updateProgressBar() {
   // Calcula el porcentaje basado en la cantidad de preguntas actuales.
@@ -152,7 +121,7 @@ function updateProgressBar() {
 // y las opciones de respuesta que aparecen a la derecha. Asi como estoy actualizando
 // la barra de progreso
 function nextQuestion() {
-  currentQuestion++;  
+  currentQuestion++;
   updateProgressBar(); // Actualiza la barra de progreso con la nueva pregunta.
 }
 
@@ -166,7 +135,7 @@ function createElementWithClass(tag, className) {
 // Función para crear el encabezado
 function createHeader(isDarkMode) {
   const header = createElementWithClass("header", "app-header");
-  header.appendChild(ColorModeSwitch(isDarkMode));
+  header.appendChild(ColorModeSwitch());
   return header;
 }
 
@@ -219,7 +188,7 @@ function initApp() {
       /*startQuiz(button.id.split("-")[1]);*/
       //Agregué esta constante porque necesito el textContent, igual dejé el split del id
       const quizTopic = e.target.textContent;
-      startQuiz(quizTopic,button.id.split("-")[1]);
+      startQuiz(quizTopic, button.id.split("-")[1]);
     })
   );
 }

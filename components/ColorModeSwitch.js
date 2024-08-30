@@ -1,42 +1,62 @@
-// ColorModeSwitch.js
-import Switch from './Switch';
-import './ColorModeSwitch.css';
+import "./ColorModeSwitch.css";
 
 function ColorModeSwitch() {
-  const div = document.createElement('div');
-  div.className = 'color-mode-switch';
+  const div = document.createElement("div");
+  div.className = "color-mode-switch";
 
-  const sunImg = document.createElement('img');
-  sunImg.id = 'sun-icon';
-  sunImg.src = localStorage.getItem('darkMode') === 'true'
-    ? '/images/icon-sun-light.svg'
-    : '/images/icon-sun-dark.svg';
+  // Crea el interruptor (checkbox)
+  const toggleInput = document.createElement("input");
+  toggleInput.className = "toggle-input";
+  toggleInput.id = "toggle";
+  toggleInput.type = "checkbox";
 
-  const switchComponent = Switch((isChecked) => {
-    document.body.classList.toggle('dark-mode', isChecked);
-    document.body.classList.toggle('light-mode', !isChecked);
-    
-    // Actualiza las imágenes según el modo
-    sunImg.src = isChecked
-      ? '/images/icon-sun-light.svg'
-      : '/images/icon-sun-dark.svg';
-    moonImg.src = isChecked
-      ? '/images/icon-moon-dark.svg'
-      : '/images/icon-moon-light.svg';
+  const toggleLabel = document.createElement("label");
+  toggleLabel.className = "toggle-label";
+  toggleLabel.setAttribute("for", "toggle");
 
-    // Guarda el estado en localStorage
-    localStorage.setItem('darkMode', isChecked);
-  });
+  // Contenedor del interruptor
+  const toggleSwitch = document.createElement("div");
+  toggleSwitch.className = "toggle-switch";
+  toggleSwitch.appendChild(toggleInput);
+  toggleSwitch.appendChild(toggleLabel);
 
-  const moonImg = document.createElement('img');
-  moonImg.id = 'moon-icon';
-  moonImg.src = localStorage.getItem('darkMode') === 'true'
-    ? '/images/icon-moon-dark.svg'
-    : '/images/icon-moon-light.svg';
+  // Crea el icono del sol
+  const sunIcon = document.createElement("div");
+  sunIcon.className = "sun-icon";
 
-  div.appendChild(sunImg);
-  div.appendChild(switchComponent);
-  div.appendChild(moonImg);
+  // Crea el icono de la luna
+  const moonIcon = document.createElement("div");
+  moonIcon.className = "moon-icon";
+
+  // Añade el icono del sol a la izquierda del interruptor
+  div.appendChild(sunIcon);
+  // Añade el interruptor en el medio
+  div.appendChild(toggleSwitch);
+  // Añade el icono de la luna a la derecha del interruptor
+  div.appendChild(moonIcon);
+
+  // Función para actualizar el modo y los iconos
+  function updateMode() {
+    const isDarkMode = toggleInput.checked;
+    document.body.className = isDarkMode ? "dark-mode" : "light-mode";
+    sunIcon.style.content = isDarkMode
+      ? 'url("/images/icon-sun-light.svg")'
+      : 'url("/images/icon-sun-dark.svg")';
+    moonIcon.style.content = isDarkMode
+      ? 'url("/images/icon-moon-light.svg")'
+      : 'url("/images/icon-moon-dark.svg")';
+
+    // Guarda la preferencia en localStorage
+    localStorage.setItem("darkMode", isDarkMode);
+  }
+
+  // Escucha el cambio de estado del interruptor
+  toggleInput.addEventListener("change", updateMode);
+
+  // Inicializa con el estado guardado en localStorage
+  const savedMode = localStorage.getItem("darkMode") === "true";
+  toggleInput.checked = savedMode;
+  updateMode();
 
   return div;
 }
