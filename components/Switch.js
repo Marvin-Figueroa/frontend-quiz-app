@@ -1,6 +1,7 @@
+// Switch.js
 import "./Switch.css";
 
-function Switch() {
+function Switch(onChange) {
   const toggleSwitch = document.createElement("div");
   toggleSwitch.className = "toggle-switch";
 
@@ -15,6 +16,10 @@ function Switch() {
 
   toggleSwitch.appendChild(toggleInput);
   toggleSwitch.appendChild(toggleLabel);
+
+  toggleInput.addEventListener("change", () => {
+    onChange(toggleInput.checked);
+  });
 
   return toggleSwitch;
 }
