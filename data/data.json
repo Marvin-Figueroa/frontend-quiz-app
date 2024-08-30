@@ -25,14 +25,14 @@
           "answer": 0
         },
         {
-          "question": "Which HTML element is used to define the title of a document?",
+          "question": "¿Qué elemento HTML se utiliza para definir el título de un documento?",
           "options": ["<head>", "<title>", "<header>", "<top>"],
           "answer": 1
         },
         {
           "question": "¿Cuál es el propósito de la etiqueta <body> en HTML?",
           "options": [
-            "Define la sección de encabezado del documento.",
+            "Define la sección de cabecera del documento.",
             "Contiene todo el contenido, como texto, imágenes y enlaces.",
             "Se utiliza para definir el contenido principal de un documento HTML.",
             "Especifica el cuerpo del contenido del correo electrónico en HTML."
@@ -45,7 +45,7 @@
           "answer": 2
         },
         {
-          "question": "¿Qué etiqueta se utiliza para mostrar imágenes en HTML?",
+          "question": "¿Qué etiqueta se usa para mostrar imágenes en HTML?",
           "options": ["<img>", "<image>", "<src>", "<pic>"],
           "answer": 0
         },
@@ -73,7 +73,7 @@
           "question": "En HTML, ¿qué hace la etiqueta `fieldset`?",
           "options": [
             "Se utiliza para agrupar datos relacionados en un formulario.",
-            "Establece un tamaño fijo para el campo.",
+            "Establece el campo a un tamaño fijo.",
             "Valida automáticamente los campos dentro de un formulario.",
             "Oculta los campos en un formulario."
           ],
@@ -101,12 +101,12 @@
           "answer": 1
         },
         {
-          "question": "",
+          "question": "¿Cómo se inserta un comentario en un archivo CSS?",
           "options": [
-            "// Este es un comentario //",
-            "/* Este es un comentario */",
-            "--  Este es un comentario--",
-            "<!-- -->"
+            "// este es un comentario //",
+            "/* este es un comentario */",
+            "-- este es un comentario --",
+            "<!-- este es un comentario -->"
           ],
           "answer": 1
         },
@@ -116,7 +116,7 @@
           "answer": 2
         },
         {
-          "question": "¿Cómo seleccionar un elemento con el nombre de clase 'header'?",
+          "question": "¿Cómo aplicas un estilo a todos los elementos <p>?",
           "options": ["p { }", ".p { }", "#p { }", "all.p { }"],
           "answer": 0
         },
@@ -126,7 +126,7 @@
           "answer": 2
         },
         {
-          "question": "¿Cómo hacer que cada palabra de un texto comience con mayúscula?",
+          "question": "¿Cómo haces que cada palabra en un texto comience con una letra mayúscula?",
           "options": [
             "text-transform: capitalize",
             "text-transform: uppercase",
@@ -136,22 +136,22 @@
           "answer": 0
         },
         {
-          "question": "¿Cómo seleccionar un elemento con el nombre de clase 'header'?",
+          "question": "¿Cómo seleccionas un elemento con el nombre de clase 'header'?",
           "options": [".header", "#header", "header", "*header"],
           "answer": 0
         },
         {
-          "question": "¿Cuál es el valor predeterminado de la propiedad 'posición'?",
+          "question": "¿Cuál es el valor predeterminado de la propiedad 'position'?",
           "options": ["relative", "fixed", "absolute", "static"],
           "answer": 3
         },
         {
           "question": "¿Cuál es el propósito de la propiedad z-index en CSS?",
           "options": [
-            "To count the number of elements",
-            "To set the magnification level of an element",
-            "To specify the stack order of an element",
-            "To create a zoom effect"
+            "Contar el número de elementos",
+            "Establecer el nivel de aumento de un elemento",
+            "Especificar el orden de apilamiento de un elemento",
+            "Crear un efecto de zoom"
           ],
           "answer": 2
         }
@@ -162,7 +162,7 @@
       "icon": "/images/icon-js.svg",
       "questions": [
         {
-          "question": "¿Qué sintaxis es correcta para mostrar 'Hola mundo' en un cuadro de alerta?",
+          "question": "¿Cuál es la sintaxis correcta para mostrar 'Hello World' en un cuadro de alerta?",
           "options": [
             "alertBox('Hello World');",
             "msg('Hello World');",
@@ -172,7 +172,7 @@
           "answer": 2
         },
         {
-          "question": "¿Qué sintaxis es correcta para mostrar 'Hola mundo' en un cuadro de alerta?",
+          "question": "¿Cómo invocas a una función llamada 'myFunction'?",
           "options": [
             "call function myFunction()",
             "call myFunction()",
@@ -182,12 +182,12 @@
           "answer": 2
         },
         {
-          "question": "¿Cómo escribir una declaración IF en JavaScript?",
+          "question": "¿Cómo se escribe una declaración IF en JavaScript?",
           "options": ["if i = 5 then", "if (i == 5)", "if i == 5", "if i = 5"],
           "answer": 1
         },
         {
-          "question": "¿Cómo escribir una declaración IF para ejecutar algún código si 'i' NO es igual a 5?",
+          "question": "¿Cómo se escribe una declaración IF para ejecutar código si 'i' NO es igual a 5?",
           "options": [
             "if (i <> 5)",
             "if i =! 5 then",
@@ -197,7 +197,7 @@
           "answer": 2
         },
         {
-          "question": "¿Cómo se inicia un bucle FOR?",
+          "question": "¿Cómo comienza un bucle FOR?",
           "options": [
             "for (i = 0; i <= 5)",
             "for i = 1 to 5",
@@ -207,17 +207,17 @@
           "answer": 3
         },
         {
-          "question": "¿Cómo puedes agregar un comentario en un JavaScript?",
+          "question": "¿Cómo puedes agregar un comentario en JavaScript?",
           "options": [
-            "Este es un comentario",
-            "// Este es un comentario //",
-            "<!-- Este es un comentario -->",
-            "/*  Este es un comentario*/"
+            "'This is a comment",
+            "//This is a comment",
+            "<!--This is a comment-->",
+            "/* This is a comment */"
           ],
           "answer": 1
         },
         {
-          "question": "Cuál es la forma correcta de escribir un array en JavaScript?",
+          "question": "¿Cuál es la forma correcta de crear un arreglo en JavaScript?",
           "options": [
             "const colors = (1:'red', 2:'green', 3:'blue')",
             "const colors = ['red', 'green', 'blue']",
@@ -227,7 +227,7 @@
           "answer": 1
         },
         {
-          "question": "Cómo encuentras el número con el valor más alto entre x e y?",
+          "question": "¿Cómo encuentras el número con el valor más alto entre x e y?",
           "options": [
             "Math.ceil(x, y)",
             "top(x, y)",
@@ -237,16 +237,16 @@
           "answer": 2
         },
         {
-          "question": "Qué operador se usa para asignar un valor a una variable?",
+          "question": "¿Qué operador se utiliza para asignar un valor a una variable?",
           "options": ["-", "*", "=", "x"],
           "answer": 2
         },
         {
-          "question": "Cuál es la forma correcta de escribir un objeto en JavaScript?",
+          "question": "¿Cuál es la forma correcta de crear un objeto en JavaScript?",
           "options": [
-            "var person = {firstName: 'John', lastName: 'Doe'};",
-            "var person = {firstName = 'John', lastName = 'Doe'};",
-            "var person = (firstName: 'John', lastName: 'Doe');",
+            "let person = {firstName: 'John', lastName: 'Doe'};",
+            "const person = {firstName = 'John', lastName = 'Doe'};",
+            "let person = (firstName: 'John', lastName: 'Doe');",
             "var person = (firstName = 'John', lastName = 'Doe');"
           ],
           "answer": 0
@@ -258,19 +258,17 @@
       "icon": "/images/icon-bootstrap.svg",
       "questions": [
         {
-          "question": "Qué es Bootstrap?",
+          "question": "¿Qué es Bootstrap?",
           "options": [
             "Un framework de CSS",
             "Un lenguaje de programación",
             "Una base de datos",
             "Un servidor web"
-            
-        
           ],
           "correctAnswer": 0
         },
         {
-          "question": "Qué clase se usa para centrar texto en Bootstrap?",
+          "question": "¿Qué clase se usa para centrar el texto en Bootstrap?",
           "options": [
             "text-center",
             "center-text",
@@ -280,17 +278,17 @@
           "correctAnswer": 0
         },
         {
-          "question": "Qué clase de Bootstrap se usa para un botón primario?",
+          "question": "¿Qué clase de Bootstrap se usa para un botón primario?",
           "options": ["btn-primary", "btn-main", "btn-default", "btn-first"],
           "correctAnswer": 0
         },
         {
-          "question": "Cómo se define una fila en Bootstrap?",
+          "question": "¿Cómo defines una fila en Bootstrap?",
           "options": ["row", "container", "col", "line"],
           "correctAnswer": 0
         },
         {
-          "question": "Qué clase hace que una imagen sea responsive en Bootstrap?",
+          "question": "¿Qué clase hace que una imagen sea responsiva en Bootstrap?",
           "options": [
             "img-fluid",
             "img-responsive",
@@ -300,22 +298,22 @@
           "correctAnswer": 0
         },
         {
-          "question": "Qué clase añade padding a un elemento en Bootstrap?",
+          "question": "¿Qué clase añade padding a un elemento en Bootstrap?",
           "options": ["p-3", "pad-3", "padding-3", "space-3"],
           "correctAnswer": 0
         },
         {
-          "question": "Qué clase de Bootstrap se usa para crear una barra de navegación?",
+          "question": "¿Qué clase de Bootstrap se utiliza para crear una barra de navegación?",
           "options": ["navbar", "navigation-bar", "nav-bar", "navbar-menu"],
           "correctAnswer": 0
         },
         {
-          "question": "Cómo creas una columna que ocupe 6 de 12 partes en Bootstrap?",
+          "question": "¿Cómo creas una columna que ocupe 6 de las 12 partes en Bootstrap?",
           "options": ["col-6", "col-md-6", "col-half", "column-6"],
           "correctAnswer": 0
         },
         {
-          "question": "Qué clase se usa para ocultar un elemento en pantallas pequeñas en Bootstrap?",
+          "question": "¿Qué clase se usa para ocultar un elemento en pantallas pequeñas en Bootstrap?",
           "options": [
             "d-none d-sm-block",
             "hidden-sm",
@@ -325,7 +323,7 @@
           "correctAnswer": 0
         },
         {
-          "question": "Qué clase se usa para ocultar un elemento en pantallas pequeñas en Bootstrap?",
+          "question": "¿Qué clase se utiliza para alinear elementos horizontalmente en el flexbox de Bootstrap?",
           "options": [
             "justify-content-center",
             "align-items-center",
