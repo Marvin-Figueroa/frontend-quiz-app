@@ -55,7 +55,9 @@ function startQuiz(textContentName,quizName) {
 
   /* Alguien mas invoca a su funcion renderButton()  y el componente Button aparece a final del contenedor
   derecho (un section con la clase 'answers-section') como ultimo hijo de este, y como hermano del componente que agrego William (el de las opciones de respuesta). El boton inicialmente mostrara el texto 'Submit Answer'. 
-  
+  */
+
+}
 
 // Función para crear y añadir el botón al documento
 function createAndAddButton(text) {
@@ -102,47 +104,39 @@ function renderQuestion(quizIndex, questionIndex) {
     }
   });
 
+// TODO: HICE ESTE CODIGO PARA PROBAR SI MUESTRA LAS DEMÁS OPCIONES Y LA PREGUNTA SIGUIENTE PERO HABRÁ QUE QUITARLO PARA DAR PASO AL BOTÓN
 
+quizMenuItems.forEach((item, index) => {
+  item.onclick = () => {
+    if (index === selectedAnswer.answer) {
+      console.log("Correcto, pero no te confíes, éste quiz te va a vencer ¡Ya verás!");
+    } else {
+      console.log("Falso, con f de ¡Te falta ácido fólico!");
+    }
 
-  // TODO: HICE ESTE CODIGO PARA PROBAR SI MUESTRA LAS DEMÁS OPCIONES Y LA PREGUNTA SIGUIENTE PERO HABRÁ QUE QUITARLO PARA DAR PASO AL BOTÓN
+    // Si hay más preguntas, mostrar la siguiente
+    if (questionIndex < quizData.questions.length - 1) {
+      
+      //Esta sería el código de la próxima pregunta reutilizo renderQuestion ya que solo se incrementa en uno el indice de la pregunta
+      renderQuestion(quizIndex,questionIndex+1)
 
-   quizMenuItems.forEach((item, index) => {
-    item.onclick = () => {
-      if (index === selectedAnswer.answer) {
-        console.log("Correcto, pero no te confíes, éste quiz te va a vencer ¡Ya verás!");
-      } else {
-        console.log("Falso, con f de ¡Te falta ácido fólico!");
-      }
-
-      // Si hay más preguntas, mostrar la siguiente
-      if (questionIndex < quizData.questions.length - 1) {
-        
-        //Esta sería el código de la próxima pregunta reutilizo renderQuestion ya que solo se incrementa en uno el indice de la pregunta
-        renderQuestion(quizIndex,questionIndex+1)
-
-      }
-      //Aqui puede ir el render del final del quiz con un else
-    };
-  }); 
+    }
+    //Aqui puede ir el render del final del quiz con un else
+  };
+}); 
 }
 
 //TODO: No logré activar la funcionalidad del progressBar con el renderQuestion
 function renderProgressBar() {
-  if (!progressBar) {
-    progressBar = ProgressBar(0);
-    document.querySelector(".questions-section").appendChild(progressBar);
-  }
-  updateProgressBar();
+if (!progressBar) {
+  progressBar = ProgressBar(0);
+  document.querySelector(".questions-section").appendChild(progressBar);
+}
+updateProgressBar();
 }
 
-// Llamamos a la función una sola vez cuando el DOM esté listo
-document.addEventListener('DOMContentLoaded', () => {
-  createAndAddButton("Submit answer");
-});
 
-}
-
-function progressBar() {
+function updateProgressBar() {
   // Calcula el porcentaje basado en la cantidad de preguntas actuales.
   const totalQuestions = currentQuiz.questions.length;
   const percentage = ((currentQuestion + 1) / totalQuestions) * 100;
