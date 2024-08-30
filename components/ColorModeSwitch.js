@@ -38,10 +38,14 @@ function ColorModeSwitch() {
   // Función para actualizar el modo y los iconos
   function updateMode() {
     const isDarkMode = toggleInput.checked;
-    document.body.className = isDarkMode ? "dark-mode" : "light-mode";
+
+    document.body.classList.toggle("dark-mode", isDarkMode);
+    document.body.classList.toggle("light-mode", !isDarkMode);
+
     sunIcon.style.content = isDarkMode
       ? 'url("/images/icon-sun-light.svg")'
       : 'url("/images/icon-sun-dark.svg")';
+
     moonIcon.style.content = isDarkMode
       ? 'url("/images/icon-moon-light.svg")'
       : 'url("/images/icon-moon-dark.svg")';

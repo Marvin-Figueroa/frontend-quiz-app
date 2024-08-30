@@ -133,7 +133,7 @@ function createElementWithClass(tag, className) {
 }
 
 // Función para crear el encabezado
-function createHeader(isDarkMode) {
+function createHeader() {
   const header = createElementWithClass("header", "app-header");
   header.appendChild(ColorModeSwitch());
   return header;
