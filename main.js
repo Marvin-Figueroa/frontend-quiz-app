@@ -8,22 +8,65 @@ import { quizzes } from "./data/data.json";
 import "./style.css";
 
 let currentQuiz;
-let currentQuestion = 0;
+let currentQuestion = 5;
 let progressBar;
 let score = 0;
 let selectedAnswer;
 
-function startQuiz(textContentName, quizName) {
+// Función para crear el contenedor de preguntas
+function createQuestionContainer() {
+  const questionContainer = document.createElement("div");
+  questionContainer.className = "question-container";
+
+  const questionCount = document.createElement("p");
+  questionCount.className = "question-count";
+
+  const question = document.createElement("h3");
+  question.className = "question-text";
+
+  questionContainer.appendChild(questionCount);
+  questionContainer.appendChild(question);
+
+  return { questionContainer, questionCount, question };
+}
+
+// Función para actualizar el contenedor de preguntas
+function updateQuestionContent(questionElement, countElement, quiz) {
+  if (!quiz || !quiz.questions || quiz.questions.length === 0) {
+    console.error("Invalid quiz data.");
+    return;
+  }
+  questionElement.textContent = quiz.questions[currentQuestion].question;
+  countElement.textContent = `Question ${currentQuestion + 1} of ${
+    quiz.questions.length
+  }`;
+}
+
+// Función para reemplazar el contenido de la sección de preguntas
+function replaceQuestionsSection(container) {
+  document.querySelector(".questions-section").replaceChildren(container);
+}
+
+function startQuiz(quizName) {
   currentQuiz = quizzes.find((quiz) => quiz.title === quizName);
+  if (!currentQuiz) {
+    console.error(`Quiz with title "${quizName}" not found.`);
+    return;
+  }
+
   document.body.classList.add("quiz-started");
 
-  const quizIndex = quizzes.findIndex((quiz) => quiz.title === textContentName);
+  // Crea el contenedor de preguntas y obtén los elementos necesarios
+  const { questionContainer, questionCount, question } =
+    createQuestionContainer();
+
+  // Actualiza el contenido del contenedor de preguntas
+  updateQuestionContent(question, questionCount, currentQuiz);
+
+  // Reemplaza el contenido de la sección de preguntas
+  replaceQuestionsSection(questionContainer);
 
   renderProgressBar();
-
-  if (quizIndex !== -1) {
-    renderQuestion(quizIndex, 0);
-  }
 }
 
 // Función para crear y añadir el botón al documento
@@ -33,70 +76,6 @@ function createAndAddButton(text) {
   console.log(`Botón "${text}" creado y añadido al documento.`);
 }
 
-// Función para mostrar las preguntas del quiz
-function renderQuestion(quizIndex, questionIndex) {
-  const quizData = quizzes[quizIndex];
-  selectedAnswer = quizData.questions[questionIndex];
-
-  // Actualizar el encabezado con el título del quiz
-  const quizHeading = document.querySelector(".quiz-heading");
-  quizHeading.textContent = quizData.title;
-
-  // Actualizar el subtítulo con la pregunta actual
-  const subHeading = document.querySelector("p");
-
-  // Mostramos el número de la pregunta en la que vamos
-  subHeading.textContent = `Pregunta ${questionIndex + 1} de ${
-    quizData.questions.length
-  }: ${selectedAnswer.question}`;
-
-  // Actualizar las opciones de respuesta en los botones
-  const quizMenuItems = document.querySelectorAll(".quiz-menu__btn");
-
-  selectedAnswer.options.forEach((optionText, index) => {
-    const optionLetter = String.fromCharCode(65 + index); // Convierte el índice a A, B, C, D...
-
-    // Reemplaza el ícono por la letra de la opción
-    let iconElement = quizMenuItems[index].querySelector("img, span");
-    if (iconElement) {
-      iconElement.textContent = optionLetter;
-    } else {
-      // Crear un nuevo span si no existe
-      iconElement = document.createElement("span");
-      iconElement.textContent = optionLetter;
-      quizMenuItems[index].prepend(iconElement);
-    }
-
-    // Reemplaza el texto de la opción
-    const textElement = quizMenuItems[index].querySelector("span:last-child");
-    if (textElement) {
-      textElement.textContent = optionText;
-    }
-  });
-
-  // TODO: HICE ESTE CODIGO PARA PROBAR SI MUESTRA LAS DEMÁS OPCIONES Y LA PREGUNTA SIGUIENTE PERO HABRÁ QUE QUITARLO PARA DAR PASO AL BOTÓN
-
-  quizMenuItems.forEach((item, index) => {
-    item.onclick = () => {
-      if (index === selectedAnswer.answer) {
-        console.log(
-          "Correcto, pero no te confíes, éste quiz te va a vencer ¡Ya verás!"
-        );
-      } else {
-        console.log("Falso, con f de ¡Te falta ácido fólico!");
-      }
-
-      // Si hay más preguntas, mostrar la siguiente
-      if (questionIndex < quizData.questions.length - 1) {
-        //Esta sería el código de la próxima pregunta reutilizo renderQuestion ya que solo se incrementa en uno el indice de la pregunta
-        renderQuestion(quizIndex, questionIndex + 1);
-      }
-      //Aqui puede ir el render del final del quiz con un else
-    };
-  });
-}
-
-//TODO: No logré activar la funcionalidad del progressBar con el renderQuestion
 function renderProgressBar() {
   if (!progressBar) {
     progressBar = ProgressBar(0);
@@ -106,6 +85,15 @@ function renderProgressBar() {
 }
 
 function updateProgressBar() {
+  if (
+    !currentQuiz ||
+    !currentQuiz.questions ||
+    currentQuiz.questions.length === 0
+  ) {
+    console.error("Cannot update progress bar: invalid quiz data.");
+    return;
+  }
+
   // Calcula el porcentaje basado en la cantidad de preguntas actuales.
   const totalQuestions = currentQuiz.questions.length;
   const percentage = ((currentQuestion + 1) / totalQuestions) * 100;
@@ -117,12 +105,9 @@ function updateProgressBar() {
   );
 }
 
-// En esta funcion actualizaremos la pregunta actual que se muestra a la izquierda
-// y las opciones de respuesta que aparecen a la derecha. Asi como estoy actualizando
-// la barra de progreso
 function nextQuestion() {
   currentQuestion++;
-  updateProgressBar(); // Actualiza la barra de progreso con la nueva pregunta.
+  updateProgressBar();
 }
 
 // Función para crear un elemento con clase
@@ -172,7 +157,7 @@ function createMainContent() {
 function initApp() {
   const app = document.querySelector("#app");
 
-  const header = createHeader(false);
+  const header = createHeader();
   const main = createElementWithClass("main", "app-main");
   const mainContent = createMainContent();
 
@@ -185,10 +170,7 @@ function initApp() {
   quizMenuButtons.forEach((button) =>
     button.addEventListener("click", (e) => {
       console.log(`Let's start the ${button.id.split("-")[1]} Quiz`);
-      /*startQuiz(button.id.split("-")[1]);*/
-      //Agregué esta constante porque necesito el textContent, igual dejé el split del id
-      const quizTopic = e.target.textContent;
-      startQuiz(quizTopic, button.id.split("-")[1]);
+      startQuiz(button.id.split("-")[1]);
     })
   );
 }

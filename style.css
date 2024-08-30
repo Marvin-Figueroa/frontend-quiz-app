@@ -176,3 +176,36 @@ body.dark-mode {
     gap: 0;
   }
 }
+
+.question-container {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+}
+
+.question-count {
+  font-style: italic;
+  font-size: 2rem;
+  font-weight: 400;
+}
+
+.light-mode .question-count {
+  color: var(--shadow-blue);
+}
+
+.dark-mode .question-count {
+  color: var(--cloud-white);
+}
+
+.question-text {
+  font-size: 3rem;
+  font-weight: bold;
+}
+
+.light-mode .question-text {
+  color: var(--slate-blue);
+}
+
+.dark-mode .question-text {
+  color: var(--white);
+}
