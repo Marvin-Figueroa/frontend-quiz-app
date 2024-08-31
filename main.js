@@ -18,10 +18,33 @@ let currentQuestion = 0;
 let progressBar;
 let score = 0;
 let selectedAnswer;
-let submitAnswerBtn; // Definir globalmente para poder actualizarlo
+let submitAnswerBtn;
 let questionContainer;
 let questionCount;
 let questionText;
+
+function resetQuiz() {
+  // Reiniciar las variables globales
+  currentQuiz = null;
+  currentQuestion = 0;
+  score = 0;
+  selectedAnswer = null;
+  submitAnswerBtn = null;
+  questionContainer = null;
+  questionCount = null;
+  questionText = null;
+  progressBar = null;
+
+  // Limpiar las secciones de preguntas y respuestas
+  document.querySelector(".questions-section").innerHTML = "";
+  document.querySelector(".answers-section").innerHTML = "";
+
+  // Quitar cualquier clase específica del quiz
+  document.body.classList.remove("quiz-started");
+
+  // Volver a mostrar la pantalla de selección de quiz
+  initApp();
+}
 
 function showQuizResult() {
   const answersSection = document.querySelector(".answers-section");
@@ -238,7 +261,10 @@ function nextQuestion() {
   currentQuestion++;
 
   if (currentQuestion >= currentQuiz.questions.length) {
+    const playAgainBtn = Button("Play Again");
+    playAgainBtn.addEventListener("click", () => resetQuiz());
     showQuizResult();
+    document.querySelector(".answers-section").appendChild(playAgainBtn);
     return;
   }
 
@@ -295,6 +321,8 @@ function createMainContent() {
 // Función principal para inicializar la aplicación
 function initApp() {
   const app = document.querySelector("#app");
+
+  app.innerHTML = "";
 
   const header = createHeader();
   const main = createElementWithClass("main", "app-main");
