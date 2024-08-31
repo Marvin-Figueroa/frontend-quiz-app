@@ -3,71 +3,155 @@ import ColorModeSwitch from "./components/ColorModeSwitch";
 import QuizHeading from "./components/QuizHeading";
 import ProgressBar from "./components/ProgressBar";
 import AnswerMenu from "./components/AnswersMenu";
+import Button from "./components/Button";
+import ErrorMessage from "./components/ErrorMessage";
 
 import { quizzes } from "./data/data.json";
+import { mapAnswerOptionToNumber } from "./utils/answerOptions";
 
 import "./style.css";
-import { mapAnswerOptionToNumber } from "./utils/answerOptions";
 
 let currentQuiz;
 let currentQuestion = 0;
 let progressBar;
 let score = 0;
 let selectedAnswer;
+let submitAnswerBtn; // Definir globalmente para poder actualizarlo
+let questionContainer;
+let questionCount;
+let questionText;
+
+function renderSubmitAnswerButton() {
+  const answersSection = document.querySelector(".answers-section");
+
+  // Si el botón ya existe, simplemente actualiza su estado
+  if (submitAnswerBtn) {
+    submitAnswerBtn.textContent = "Submit Answer";
+    submitAnswerBtn.removeEventListener("click", nextQuestion);
+    submitAnswerBtn.addEventListener("click", handleAnswerSubmission);
+  } else {
+    // Crear el botón si no existe
+    submitAnswerBtn = Button("Submit Answer");
+    submitAnswerBtn.addEventListener("click", handleAnswerSubmission);
+    answersSection.appendChild(submitAnswerBtn);
+  }
+}
+
+function handleAnswerSubmission() {
+  if (selectedAnswer === undefined || selectedAnswer === null) {
+    showErrorMessage("Please select an answer");
+    return;
+  }
+
+  const correctAnswerIndex = currentQuiz.questions[currentQuestion].answer;
+  const isCorrect = selectedAnswer === correctAnswerIndex;
+
+  if (isCorrect) {
+    score++;
+  }
+
+  updateAnswerButtonsState(isCorrect, correctAnswerIndex);
+
+  // Cambiar el botón a "Next Question"
+  submitAnswerBtn.textContent = "Next Question";
+  submitAnswerBtn.removeEventListener("click", handleAnswerSubmission);
+  submitAnswerBtn.addEventListener("click", nextQuestion);
+}
+
+function showErrorMessage(message) {
+  const answersSection = document.querySelector(".answers-section");
+
+  let errorMessage = answersSection.querySelector(".error-message");
+
+  if (errorMessage) {
+    errorMessage.querySelector(".error-text").textContent = message;
+    errorMessage.classList.add("visible");
+  } else {
+    errorMessage = ErrorMessage(message);
+    errorMessage.classList.add("visible");
+    answersSection.appendChild(errorMessage);
+  }
+
+  // Oculta el mensaje después de 1 segundo
+  setTimeout(() => {
+    errorMessage.classList.remove("visible");
+  }, 1000);
+}
+
+function updateAnswerButtonsState(isCorrect, correctAnswerIndex) {
+  const answersButtons = document.querySelectorAll(".answer__btn");
+
+  answersButtons.forEach((button, index) => {
+    const icon = button.querySelector(".answer__icon");
+
+    if (index === selectedAnswer) {
+      button.classList.add(isCorrect ? "correct" : "incorrect");
+      icon.src = isCorrect
+        ? "/images/icon-correct.svg"
+        : "/images/icon-incorrect.svg";
+    }
+
+    if (!isCorrect && index === correctAnswerIndex) {
+      icon.src = "/images/icon-correct.svg";
+    }
+  });
+}
 
 function renderAnswerOptions() {
   const answersSection = document.querySelector(".answers-section");
   const quizMenu = answersSection.querySelector(".quiz-menu");
+  const oldAnswersMenu = answersSection.querySelector(".answers-menu");
 
   // Genera el nuevo menú de respuestas en memoria
-  const answersMenu = AnswerMenu(currentQuiz.questions[currentQuestion]);
+  const newAnswersMenu = AnswerMenu(currentQuiz.questions[currentQuestion]);
 
-  // Reemplaza solo el menú de respuestas, preservando otros elementos
-  answersSection.replaceChild(answersMenu, quizMenu);
+  if (quizMenu) {
+    // Reemplaza el menú de respuestas existente
+    answersSection.replaceChild(newAnswersMenu, quizMenu);
+  } else if (oldAnswersMenu) {
+    answersSection.replaceChild(newAnswersMenu, oldAnswersMenu);
+  }
 
   // Añade eventos a los botones de respuesta
-  const answersButtons = answersMenu.querySelectorAll(".answer__btn");
+  const answersButtons = newAnswersMenu.querySelectorAll(".answer__btn");
 
   answersButtons.forEach((button) =>
     button.addEventListener("click", () => {
       selectedAnswer = mapAnswerOptionToNumber(button.id[button.id.length - 1]);
-      console.log("You chose answer option: ", selectedAnswer);
     })
   );
 }
 
-// Función para crear el contenedor de preguntas
-function createQuestionContainer() {
-  const questionContainer = document.createElement("div");
+function initializeQuestionContainer() {
+  // Crea los elementos y guárdalos en variables globales
+  questionContainer = document.createElement("div");
   questionContainer.className = "question-container";
 
-  const questionCount = document.createElement("p");
+  questionCount = document.createElement("p");
   questionCount.className = "question-count";
 
-  const question = document.createElement("h3");
-  question.className = "question-text";
+  questionText = document.createElement("h3");
+  questionText.className = "question-text";
 
   questionContainer.appendChild(questionCount);
-  questionContainer.appendChild(question);
+  questionContainer.appendChild(questionText);
 
-  return { questionContainer, questionCount, question };
+  // Añade el contenedor a la sección de preguntas una sola vez
+  const questionsSection = document.querySelector(".questions-section");
+  questionsSection.replaceChildren(questionContainer);
 }
 
-// Función para actualizar el contenedor de preguntas
-function updateQuestionContent(questionElement, countElement, quiz) {
+function updateQuestionContent(quiz) {
   if (!quiz || !quiz.questions || quiz.questions.length === 0) {
     console.error("Invalid quiz data.");
     return;
   }
-  questionElement.textContent = quiz.questions[currentQuestion].question;
-  countElement.textContent = `Question ${currentQuestion + 1} of ${
+
+  // Actualiza directamente los elementos existentes
+  questionText.textContent = quiz.questions[currentQuestion].question;
+  questionCount.textContent = `Question ${currentQuestion + 1} of ${
     quiz.questions.length
   }`;
-}
-
-// Función para reemplazar el contenido de la sección de preguntas
-function replaceQuestionsSection(container) {
-  document.querySelector(".questions-section").replaceChildren(container);
 }
 
 function startQuiz(quizName) {
@@ -79,26 +163,19 @@ function startQuiz(quizName) {
 
   document.body.classList.add("quiz-started");
 
-  // Crea el contenedor de preguntas y obtén los elementos necesarios
-  const { questionContainer, questionCount, question } =
-    createQuestionContainer();
+  // Inicializa el contenedor de preguntas (solo la primera vez)
+  if (!questionContainer) {
+    initializeQuestionContainer();
+  }
 
-  // Actualiza el contenido del contenedor de preguntas
-  updateQuestionContent(question, questionCount, currentQuiz);
-
-  // Reemplaza el contenido de la sección de preguntas
-  replaceQuestionsSection(questionContainer);
+  // Actualiza el contenido de la pregunta actual
+  updateQuestionContent(currentQuiz);
 
   renderAnswerOptions();
 
-  renderProgressBar();
-}
+  renderSubmitAnswerButton();
 
-// Función para crear y añadir el botón al documento
-function createAndAddButton(text) {
-  const renderButton = Button(text);
-  document.body.appendChild(renderButton);
-  console.log(`Botón "${text}" creado y añadido al documento.`);
+  renderProgressBar();
 }
 
 function renderProgressBar() {
@@ -132,7 +209,19 @@ function updateProgressBar() {
 
 function nextQuestion() {
   currentQuestion++;
-  updateProgressBar();
+
+  if (currentQuestion >= currentQuiz.questions.length) {
+    // Lógica para finalizar el cuestionario o mostrar resultados
+    console.log("Quiz completed!");
+    console.log("You scored: ", score);
+    return;
+  }
+
+  selectedAnswer = null; // Reinicia la selección
+  updateQuestionContent(currentQuiz); // Actualiza la pregunta
+  renderAnswerOptions(); // Vuelve a renderizar las opciones de respuesta
+  renderSubmitAnswerButton(); // Actualiza el botón
+  updateProgressBar(); // Actualiza la barra de progreso
 }
 
 // Función para crear un elemento con clase
@@ -194,7 +283,6 @@ function initApp() {
   const quizMenuButtons = document.querySelectorAll(".quiz-menu__btn");
   quizMenuButtons.forEach((button) =>
     button.addEventListener("click", (e) => {
-      console.log(`Let's start the ${button.id.split("-")[1]} Quiz`);
       startQuiz(button.id.split("-")[1]);
     })
   );

@@ -19,8 +19,8 @@
   border-radius: 8px;
   background-color: var(--cloud-white);
   color: var(--shadow-blue);
-  min-width: 55px;
-  min-height: 55px;
+  min-width: 40px;
+  min-height: 40px;
   font-size: 3.5rem;
   font-weight: 400;
 }
