@@ -15,7 +15,7 @@ import {
   renderQuizTopic,
   renderProgressBar,
   showErrorMessage,
-  updateAnswerButtonsState,
+  updateAnswerOptionsState,
 } from "./ui.js";
 
 export function nextQuestion() {
@@ -101,7 +101,12 @@ export function handleAnswerSubmission() {
     state.score++;
   }
 
-  updateAnswerButtonsState(isCorrect, correctAnswerIndex);
+  updateAnswerOptionsState(isCorrect, correctAnswerIndex);
+
+  const answerRadios = document.querySelectorAll(".answer__radio");
+  answerRadios.forEach((radio) => {
+    radio.disabled = true;
+  });
 
   state.submitAnswerBtn.textContent =
     state.currentQuestion === state.currentQuiz.questions.length - 1

@@ -7,9 +7,15 @@ function AnswerMenuItem(optionNumber, answer) {
   const li = document.createElement("li");
   li.className = "answer";
 
-  const button = document.createElement("button");
-  button.className = "answer__btn";
-  button.id = `answer__btn--option-${optionLetter}`;
+  const radioButton = document.createElement("input");
+  radioButton.type = "radio";
+  radioButton.name = "answer-options";
+  radioButton.id = `answer__radio--option-${optionLetter}`;
+  radioButton.className = "answer__radio";
+
+  const label = document.createElement("label");
+  label.className = "answer__label";
+  label.htmlFor = radioButton.id;
 
   const optionContainer = document.createElement("span");
   optionContainer.className = `answer__option-letter`;
@@ -27,11 +33,12 @@ function AnswerMenuItem(optionNumber, answer) {
 
   iconContainer.appendChild(icon);
 
-  button.appendChild(optionContainer);
-  button.appendChild(span);
-  button.appendChild(iconContainer);
+  label.appendChild(optionContainer);
+  label.appendChild(span);
+  label.appendChild(iconContainer);
 
-  li.appendChild(button);
+  li.appendChild(radioButton);
+  li.appendChild(label);
 
   return li;
 }

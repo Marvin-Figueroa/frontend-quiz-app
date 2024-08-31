@@ -77,7 +77,6 @@ export function renderAnswerOptions() {
   const quizMenu = answersSection.querySelector(".quiz-menu");
   const oldAnswersMenu = answersSection.querySelector(".answers-menu");
 
-  // Genera el nuevo menú de respuestas en memoria
   const newAnswersMenu = AnswerMenu(
     state.currentQuiz.questions[state.currentQuestion]
   );
@@ -88,12 +87,12 @@ export function renderAnswerOptions() {
     answersSection.replaceChild(newAnswersMenu, oldAnswersMenu);
   }
 
-  const answersButtons = newAnswersMenu.querySelectorAll(".answer__btn");
+  const answerOptions = newAnswersMenu.querySelectorAll(".answer__radio");
 
-  answersButtons.forEach((button) =>
-    button.addEventListener("click", () => {
+  answerOptions.forEach((option) =>
+    option.addEventListener("change", () => {
       state.selectedAnswer = mapAnswerOptionToNumber(
-        button.id[button.id.length - 1]
+        option.id[option.id.length - 1]
       );
     })
   );
@@ -184,14 +183,14 @@ export function renderSubmitAnswerButton() {
   }
 }
 
-export function updateAnswerButtonsState(isCorrect, correctAnswerIndex) {
-  const answersButtons = document.querySelectorAll(".answer__btn");
+export function updateAnswerOptionsState(isCorrect, correctAnswerIndex) {
+  const answerOptions = document.querySelectorAll(".answer__label");
 
-  answersButtons.forEach((button, index) => {
-    const icon = button.querySelector(".answer__icon");
+  answerOptions.forEach((option, index) => {
+    const icon = option.querySelector(".answer__icon");
 
     if (index === state.selectedAnswer) {
-      button.classList.add(isCorrect ? "correct" : "incorrect");
+      option.classList.add(isCorrect ? "correct" : "incorrect");
       icon.src = isCorrect
         ? "/images/icon-correct.svg"
         : "/images/icon-incorrect.svg";
