@@ -5,12 +5,13 @@ import ProgressBar from "./components/ProgressBar";
 import AnswerMenu from "./components/AnswersMenu";
 import Button from "./components/Button";
 import ErrorMessage from "./components/ErrorMessage";
+import QuizResult from "./components/QuizResult";
+import QuizTopic from "./components/QuizTopic";
 
 import { quizzes } from "./data/data.json";
 import { mapAnswerOptionToNumber } from "./utils/answerOptions";
 
 import "./style.css";
-import QuizTopic from "./components/QuizTopic";
 
 let currentQuiz;
 let currentQuestion = 0;
@@ -21,6 +22,22 @@ let submitAnswerBtn; // Definir globalmente para poder actualizarlo
 let questionContainer;
 let questionCount;
 let questionText;
+
+function showQuizResult() {
+  const answersSection = document.querySelector(".answers-section");
+  const questionsSection = document.querySelector(".questions-section");
+
+  answersSection.innerHTML = "";
+  questionsSection.innerHTML = "";
+
+  const scoreElement = QuizResult(
+    currentQuiz,
+    score,
+    currentQuiz.questions.length
+  );
+  answersSection.appendChild(scoreElement);
+  questionsSection.appendChild(QuizHeading("Quiz Completed", "You scored..."));
+}
 
 function renderQuizTopic() {
   const header = document.querySelector(".app-header");
@@ -219,9 +236,7 @@ function nextQuestion() {
   currentQuestion++;
 
   if (currentQuestion >= currentQuiz.questions.length) {
-    // Lógica para finalizar el cuestionario o mostrar resultados
-    console.log("Quiz completed!");
-    console.log("You scored: ", score);
+    showQuizResult();
     return;
   }
 
