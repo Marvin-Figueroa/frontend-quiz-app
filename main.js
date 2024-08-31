@@ -75,8 +75,10 @@ function handleAnswerSubmission() {
 
   updateAnswerButtonsState(isCorrect, correctAnswerIndex);
 
-  // Cambiar el botón a "Next Question"
-  submitAnswerBtn.textContent = "Next Question";
+  submitAnswerBtn.textContent =
+    currentQuestion === currentQuiz.questions.length - 1
+      ? "Finish Quiz"
+      : "Next Question";
   submitAnswerBtn.removeEventListener("click", handleAnswerSubmission);
   submitAnswerBtn.addEventListener("click", nextQuestion);
 }
