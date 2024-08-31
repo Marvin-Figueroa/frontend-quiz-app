@@ -57,6 +57,8 @@ body {
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
+  padding-bottom: 4rem;
+  height: 100vh;
 }
 
 body.light-mode {
@@ -72,7 +74,7 @@ body.dark-mode {
 #app {
   display: flex;
   flex-direction: column;
-  height: 100vh;
+  height: 100%;
 }
 
 .app-header {
@@ -137,6 +139,7 @@ body.dark-mode {
   display: flex;
   flex-direction: column;
   gap: 3rem;
+  position: relative;
 }
 
 @media (max-width: 1024px) {
