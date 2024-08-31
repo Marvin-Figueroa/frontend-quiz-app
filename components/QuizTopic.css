@@ -21,3 +21,17 @@
 .dark-mode .quiz-topic__text {
   color: var(--white);
 }
+
+@media (max-width: 600px) {
+  .quiz-topic {
+    gap: 10px;
+
+    img {
+      width: 25px;
+    }
+  }
+
+  .quiz-topic__text {
+    font-size: 1.8rem;
+  }
+}

@@ -63,3 +63,9 @@
 .toggle-switch .toggle-input:checked + .toggle-label::before {
   transform: translateX(16px);
 }
+
+@media (max-width: 600px) {
+  .color-mode-switch {
+    gap: 2px;
+  }
+}

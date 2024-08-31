@@ -99,6 +99,7 @@ body.dark-mode {
   align-items: center;
   padding: 0 2rem;
   flex-grow: 1;
+  max-height: 100%;
 }
 
 .main-content {
@@ -172,6 +173,10 @@ body.dark-mode {
 
   body.dark-mode {
     background-image: url("/images/pattern-background-mobile-dark.svg");
+  }
+
+  .app-header {
+    margin-bottom: 5rem;
   }
 
   .main-content {
