@@ -27,7 +27,7 @@
 
 .answer__btn {
   font-size: 1.8rem;
-  height: 75px;
+  /* height: 75px; */
   width: 100%;
   border-radius: 12px;
   cursor: pointer;

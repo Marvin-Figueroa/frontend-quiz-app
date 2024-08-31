@@ -147,48 +147,6 @@ body.dark-mode {
   position: relative;
 }
 
-@media (max-width: 1024px) {
-  body {
-    background-position: top left;
-    background-size: 50%;
-  }
-
-  body.light-mode {
-    background-image: url("/images/pattern-background-tablet-light.svg");
-  }
-
-  body.dark-mode {
-    background-image: url("/images/pattern-background-tablet-dark.svg");
-  }
-}
-
-@media (max-width: 768px) {
-  body {
-    background-size: cover;
-  }
-
-  body.light-mode {
-    background-image: url("/images/pattern-background-mobile-light.svg");
-  }
-
-  body.dark-mode {
-    background-image: url("/images/pattern-background-mobile-dark.svg");
-  }
-
-  .app-header {
-    margin-bottom: 5rem;
-  }
-
-  .main-content {
-    flex-direction: column;
-    gap: 60px;
-  }
-
-  .quiz-started .main-content {
-    gap: 0;
-  }
-}
-
 .question-container {
   display: flex;
   flex-direction: column;
@@ -220,4 +178,61 @@ body.dark-mode {
 
 .dark-mode .question-text {
   color: var(--white);
+}
+
+@media (max-width: 1024px) {
+  body {
+    background-position: top left;
+    background-size: 50%;
+  }
+
+  body.light-mode {
+    background-image: url("/images/pattern-background-tablet-light.svg");
+  }
+
+  body.dark-mode {
+    background-image: url("/images/pattern-background-tablet-dark.svg");
+  }
+}
+
+@media (max-width: 768px) {
+  body {
+    background-size: cover;
+  }
+
+  body.light-mode {
+    background-image: url("/images/pattern-background-mobile-light.svg");
+  }
+
+  body.dark-mode {
+    background-image: url("/images/pattern-background-mobile-dark.svg");
+  }
+
+  .app-header {
+    margin-bottom: 4rem;
+  }
+
+  .main-content {
+    flex-direction: column;
+    gap: 60px;
+  }
+
+  .quiz-started .main-content {
+    gap: 0;
+  }
+}
+
+@media (max-width: 500px) {
+  body {
+    height: auto;
+  }
+
+  .app-header {
+    margin-bottom: 2rem;
+    width: 100%;
+  }
+
+  .app-main {
+    width: 100%;
+  }
 }
