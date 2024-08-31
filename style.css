@@ -86,6 +86,10 @@ body.dark-mode {
   max-width: 120rem;
 }
 
+.quiz-started .app-header {
+  justify-content: space-between;
+}
+
 .app-main {
   max-width: 120rem;
   margin: 0 auto;

@@ -10,6 +10,7 @@ import { quizzes } from "./data/data.json";
 import { mapAnswerOptionToNumber } from "./utils/answerOptions";
 
 import "./style.css";
+import QuizTopic from "./components/QuizTopic";
 
 let currentQuiz;
 let currentQuestion = 0;
@@ -20,6 +21,11 @@ let submitAnswerBtn; // Definir globalmente para poder actualizarlo
 let questionContainer;
 let questionCount;
 let questionText;
+
+function renderQuizTopic() {
+  const header = document.querySelector(".app-header");
+  header.prepend(QuizTopic(currentQuiz.title, currentQuiz.icon));
+}
 
 function renderSubmitAnswerButton() {
   const answersSection = document.querySelector(".answers-section");
@@ -167,6 +173,8 @@ function startQuiz(quizName) {
   if (!questionContainer) {
     initializeQuestionContainer();
   }
+
+  renderQuizTopic();
 
   // Actualiza el contenido de la pregunta actual
   updateQuestionContent(currentQuiz);

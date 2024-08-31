@@ -1,9 +1,9 @@
-.quiz-menu__img-container {
+.quiz-topic-icon-container {
   display: flex;
   justify-content: center;
   align-items: center;
   border-radius: 8px;
-  padding: 10px;
+  padding: 8px;
 
   img {
     border-radius: 5px;
