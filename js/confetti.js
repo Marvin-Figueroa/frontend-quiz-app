@@ -5,7 +5,7 @@ export let confettiInterval;
 export function launchConfetti() {
   const duration = 10 * 1000;
   const animationEnd = Date.now() + duration;
-  const defaults = { startVelocity: 30, spread: 360, ticks: 60, zIndex: 0 };
+  const defaults = { startVelocity: 25, spread: 360, ticks: 50, zIndex: 0 };
 
   function randomInRange(min, max) {
     return Math.random() * (max - min) + min;
@@ -19,7 +19,7 @@ export function launchConfetti() {
       return;
     }
 
-    const particleCount = 50 * (timeLeft / duration);
+    const particleCount = 35 * (timeLeft / duration);
 
     confetti(
       Object.assign({}, defaults, {
@@ -33,7 +33,7 @@ export function launchConfetti() {
         origin: { x: randomInRange(0.7, 0.9), y: Math.random() - 0.2 },
       })
     );
-  }, 250);
+  }, 400);
 }
 
 export function stopConfetti() {

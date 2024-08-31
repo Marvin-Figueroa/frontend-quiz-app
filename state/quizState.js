@@ -9,4 +9,5 @@ export const state = {
   questionText: null,
   progressBar: null,
   confettiInterval: null,
+  timeoutId: null,
 };

@@ -217,7 +217,12 @@ export function showErrorMessage(message) {
     answersSection.appendChild(errorMessage);
   }
 
-  setTimeout(() => {
+  if (state.timeoutId) {
+    clearTimeout(state.timeoutId);
+  }
+
+  state.timeoutId = setTimeout(() => {
     errorMessage.classList.remove("visible");
-  }, 1000);
+    state.timeoutId = null;
+  }, 2000);
 }
