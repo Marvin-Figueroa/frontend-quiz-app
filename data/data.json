@@ -265,72 +265,72 @@
             "Una base de datos",
             "Un servidor web"
           ],
-          "correctAnswer": 0
+          "answer": 0
         },
         {
           "question": "¿Qué clase se usa para centrar el texto en Bootstrap?",
           "options": [
-            "text-center",
             "center-text",
             "align-center",
-            "text-align-center"
+            "text-align-center",
+            "text-center"
           ],
-          "correctAnswer": 0
+          "answer": 3
         },
         {
           "question": "¿Qué clase de Bootstrap se usa para un botón primario?",
-          "options": ["btn-primary", "btn-main", "btn-default", "btn-first"],
-          "correctAnswer": 0
+          "options": ["btn-main", "btn-primary", "btn-default", "btn-first"],
+          "answer": 1
         },
         {
           "question": "¿Cómo defines una fila en Bootstrap?",
           "options": ["row", "container", "col", "line"],
-          "correctAnswer": 0
+          "answer": 0
         },
         {
           "question": "¿Qué clase hace que una imagen sea responsiva en Bootstrap?",
           "options": [
-            "img-fluid",
             "img-responsive",
             "responsive-img",
+            "img-fluid",
             "img-adaptable"
           ],
-          "correctAnswer": 0
+          "answer": 2
         },
         {
           "question": "¿Qué clase añade padding a un elemento en Bootstrap?",
-          "options": ["p-3", "pad-3", "padding-3", "space-3"],
-          "correctAnswer": 0
+          "options": ["pad-3", "p-3", "padding-3", "space-3"],
+          "answer": 1
         },
         {
           "question": "¿Qué clase de Bootstrap se utiliza para crear una barra de navegación?",
           "options": ["navbar", "navigation-bar", "nav-bar", "navbar-menu"],
-          "correctAnswer": 0
+          "answer": 0
         },
         {
           "question": "¿Cómo creas una columna que ocupe 6 de las 12 partes en Bootstrap?",
-          "options": ["col-6", "col-md-6", "col-half", "column-6"],
-          "correctAnswer": 0
+          "options": ["col-md-6", "col-half", "column-6", "col-6"],
+          "answer": 3
         },
         {
           "question": "¿Qué clase se usa para ocultar un elemento en pantallas pequeñas en Bootstrap?",
           "options": [
-            "d-none d-sm-block",
             "hidden-sm",
+            "d-none d-sm-block",
             "hide-xs",
             "invisible-xs"
           ],
-          "correctAnswer": 0
+          "answer": 1
         },
         {
           "question": "¿Qué clase se utiliza para alinear elementos horizontalmente en el flexbox de Bootstrap?",
           "options": [
-            "justify-content-center",
             "align-items-center",
             "center-horizontal",
+            "justify-content-center",
             "horizontal-align"
           ],
-          "correctAnswer": 0
+          "answer": 2
         }
       ]
     }
