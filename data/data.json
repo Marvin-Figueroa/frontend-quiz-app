@@ -3,336 +3,1112 @@
     {
       "title": "HTML",
       "icon": "/images/icon-html.svg",
-      "questions": [
-        {
-          "question": "¿Qué significa HTML?",
-          "options": [
-            "Hyper Trainer Marking Language",
-            "Hyper Text Marketing Language",
-            "Hyper Text Markup Language",
-            "Hyper Text Markup Leveler"
-          ],
-          "answer": 2
-        },
-        {
-          "question": "¿Cuál de las siguientes es la estructura correcta para un documento HTML?",
-          "options": [
-            "<html><head></head><body></body></html>",
-            "<head><html></html><body></body></head>",
-            "<body><head></head><html></html></body>",
-            "<html><body></body><head></head></html>"
-          ],
-          "answer": 0
-        },
-        {
-          "question": "¿Qué elemento HTML se utiliza para definir el título de un documento?",
-          "options": ["<head>", "<title>", "<header>", "<top>"],
-          "answer": 1
-        },
-        {
-          "question": "¿Cuál es el propósito de la etiqueta <body> en HTML?",
-          "options": [
-            "Define la sección de cabecera del documento.",
-            "Contiene todo el contenido, como texto, imágenes y enlaces.",
-            "Se utiliza para definir el contenido principal de un documento HTML.",
-            "Especifica el cuerpo del contenido del correo electrónico en HTML."
-          ],
-          "answer": 1
-        },
-        {
-          "question": "¿Qué etiqueta HTML se utiliza para crear un hipervínculo?",
-          "options": ["<hyperlink>", "<link>", "<a>", "<href>"],
-          "answer": 2
-        },
-        {
-          "question": "¿Qué etiqueta se usa para mostrar imágenes en HTML?",
-          "options": ["<img>", "<image>", "<src>", "<pic>"],
-          "answer": 0
-        },
-        {
-          "question": "¿Qué atributo se utiliza para proporcionar la ruta de una imagen en la etiqueta <img>?",
-          "options": ["link", "src", "href", "url"],
-          "answer": 1
-        },
-        {
-          "question": "¿Qué etiqueta HTML se utiliza para crear una lista desordenada?",
-          "options": ["<ul>", "<ol>", "<list>", "<li>"],
-          "answer": 0
-        },
-        {
-          "question": "¿Qué hace la etiqueta <br>?",
-          "options": [
-            "Divide el texto en dos secciones.",
-            "Crea un texto en negrita.",
-            "Inserta un salto de línea.",
-            "Agrega una nueva fila en una tabla."
-          ],
-          "answer": 2
-        },
-        {
-          "question": "En HTML, ¿qué hace la etiqueta `fieldset`?",
-          "options": [
-            "Se utiliza para agrupar datos relacionados en un formulario.",
-            "Establece el campo a un tamaño fijo.",
-            "Valida automáticamente los campos dentro de un formulario.",
-            "Oculta los campos en un formulario."
-          ],
-          "answer": 0
-        }
-      ]
+      "questions": {
+        "begginer": [
+          {
+            "question": "¿Qué significa HTML?",
+            "options": [
+              "Hyper Trainer Marking Language",
+              "Hyper Text Marketing Language",
+              "Hyper Text Markup Language",
+              "Hyper Text Markup Leveler"
+            ],
+            "answer": 2
+          },
+          {
+            "question": "¿Cuál de las siguientes es la estructura correcta para un documento HTML?",
+            "options": [
+              "<html><head></head><body></body></html>",
+              "<head><html></html><body></body></head>",
+              "<body><head></head><html></html></body>",
+              "<html><body></body><head></head></html>"
+            ],
+            "answer": 0
+          },
+          {
+            "question": "¿Qué elemento HTML se utiliza para definir el título de un documento?",
+            "options": ["<head>", "<title>", "<header>", "<top>"],
+            "answer": 1
+          },
+          {
+            "question": "¿Cuál es el propósito de la etiqueta <body> en HTML?",
+            "options": [
+              "Define la sección de cabecera del documento.",
+              "Contiene todo el contenido, como texto, imágenes y enlaces.",
+              "Se utiliza para definir el contenido principal de un documento HTML.",
+              "Especifica el cuerpo del contenido del correo electrónico en HTML."
+            ],
+            "answer": 1
+          },
+          {
+            "question": "¿Qué etiqueta HTML se utiliza para crear un hipervínculo?",
+            "options": ["<hyperlink>", "<link>", "<a>", "<href>"],
+            "answer": 2
+          },
+          {
+            "question": "¿Qué etiqueta se usa para mostrar imágenes en HTML?",
+            "options": ["<img>", "<image>", "<src>", "<pic>"],
+            "answer": 0
+          },
+          {
+            "question": "¿Qué atributo se utiliza para proporcionar la ruta de una imagen en la etiqueta <img>?",
+            "options": ["link", "src", "href", "url"],
+            "answer": 1
+          },
+          {
+            "question": "¿Qué etiqueta HTML se utiliza para crear una lista desordenada?",
+            "options": ["<ul>", "<ol>", "<list>", "<li>"],
+            "answer": 0
+          },
+          {
+            "question": "¿Qué hace la etiqueta <br>?",
+            "options": [
+              "Divide el texto en dos secciones.",
+              "Crea un texto en negrita.",
+              "Inserta un salto de línea.",
+              "Agrega una nueva fila en una tabla."
+            ],
+            "answer": 2
+          },
+          {
+            "question": "En HTML, ¿qué hace la etiqueta `fieldset`?",
+            "options": [
+              "Se utiliza para agrupar datos relacionados en un formulario.",
+              "Establece el campo a un tamaño fijo.",
+              "Valida automáticamente los campos dentro de un formulario.",
+              "Oculta los campos en un formulario."
+            ],
+            "answer": 0
+          }
+        ],
+        "advanced": [
+          {
+            "question": "¿Cuál de las siguientes es la forma correcta de incluir un comentario en HTML?",
+            "options": [
+              "// Esto es un comentario",
+              "<!-- Esto es un comentario -->",
+              "/* Esto es un comentario */",
+              "<comment>Esto es un comentario</comment>"
+            ],
+            "answer": 1
+          },
+          {
+            "question": "¿Qué etiqueta HTML se usa para definir una sección de navegación en un documento?",
+            "options": ["<menu>", "<header>", "<nav>", "<section>"],
+            "answer": 2
+          },
+          {
+            "question": "¿Qué atributo en una etiqueta <form> especifica a dónde se enviará el formulario cuando se envíe?",
+            "options": ["target", "action", "method", "href"],
+            "answer": 1
+          },
+          {
+            "question": "¿Cuál es el propósito del atributo 'srcset' en una etiqueta <img>?",
+            "options": [
+              "Especifica una imagen alternativa en caso de que la original no se cargue.",
+              "Define una lista de recursos multimedia para el atributo <video>.",
+              "Permite especificar múltiples recursos de imagen para diferentes resoluciones y tamaños de pantalla.",
+              "Permite añadir texto alternativo a las imágenes."
+            ],
+            "answer": 2
+          },
+          {
+            "question": "¿Qué etiqueta se utiliza para definir un campo de entrada para una dirección de correo electrónico en HTML5?",
+            "options": [
+              "<input type='email'>",
+              "<input type='mail'>",
+              "<input type='text'>",
+              "<input type='url'>"
+            ],
+            "answer": 0
+          },
+          {
+            "question": "¿Qué etiqueta se utiliza para incrustar un vídeo en una página web en HTML5?",
+            "options": ["<media>", "<embed>", "<object>", "<video>"],
+            "answer": 3
+          },
+          {
+            "question": "¿Cuál es la diferencia principal entre los atributos 'id' y 'class' en HTML?",
+            "options": [
+              "'id' se usa para aplicar estilos CSS, mientras que 'class' no tiene impacto en el estilo.",
+              "'id' se utiliza para identificar un elemento único y 'class' se usa para agrupar varios similares.",
+              "'id' permite seleccionar múltiples elementos, mientras que 'class' selecciona solo uno.",
+              "'id' es obligatorio en cada página HTML, mientras que 'class' es opcional."
+            ],
+            "answer": 1
+          },
+          {
+            "question": "¿Qué atributo se usa en HTML5 para especificar que un campo de entrada debe ser completado antes de enviar un formulario?",
+            "options": ["required", "mandatory", "validate", "novalidate"],
+            "answer": 0
+          },
+          {
+            "question": "¿Cómo se define un texto alternativo para una imagen en HTML?",
+            "options": [
+              "Usando el atributo 'title' en la etiqueta <img>",
+              "Usando el atributo 'description' en la etiqueta <img>",
+              "Usando el atributo 'alt' en la etiqueta <img>",
+              "Usando el atributo 'text' en la etiqueta <img>"
+            ],
+            "answer": 2
+          },
+          {
+            "question": "¿Qué elemento HTML se utiliza para reproducir audio en una página web?",
+            "options": ["<audio>", "<sound>", "<media>", "<track>"],
+            "answer": 0
+          },
+          {
+            "question": "¿Cuál es la función del atributo 'defer' en una etiqueta <script>?",
+            "options": [
+              "Impide la ejecución del script hasta que ocurra un evento específico.",
+              "Indica que el script debe ser ejecutado antes de analizar el documento.",
+              "Hace que el script se ejecute en segundo plano mientras se carga la página.",
+              "Indica que el script debe ser ejecutado después de que el documento haya sido analizado."
+            ],
+            "answer": 3
+          },
+          {
+            "question": "¿Qué atributo se utiliza para abrir un enlace en una nueva pestaña o ventana del navegador?",
+            "options": [
+              "target='_blank'",
+              "rel='noopener'",
+              "window='new'",
+              "link='_blank'"
+            ],
+            "answer": 0
+          },
+          {
+            "question": "¿Cuál es el propósito de la etiqueta <meta> en HTML?",
+            "options": [
+              "Definir el contenido de la página.",
+              "Especificar el diseño de la página.",
+              "Proporcionar metadatos como palabras clave y descripciones para el documento HTML.",
+              "Crear un enlace a archivos CSS externos."
+            ],
+            "answer": 2
+          },
+          {
+            "question": "¿Qué etiqueta se usa para crear una lista desplegable en HTML?",
+            "options": ["<select>", "<option>", "<list>", "<dropdown>"],
+            "answer": 0
+          },
+          {
+            "question": "¿Cuál es la forma correcta de incrustar una hoja de estilos CSS en un documento HTML?",
+            "options": [
+              "<style src='styles.css'>",
+              "<link rel='stylesheet' href='styles.css'>",
+              "<stylesheet link='styles.css'>",
+              "<css href='styles.css'>"
+            ],
+            "answer": 1
+          },
+          {
+            "question": "¿Qué atributo en la etiqueta <input> especifica que se puede seleccionar más de una opción en un campo de carga de archivos?",
+            "options": ["files", "many", "multiple", "select"],
+            "answer": 2
+          },
+          {
+            "question": "¿Qué elemento HTML se utiliza para agrupar otros elementos y aplicarles un estilo común?",
+            "options": ["<div>", "<span>", "<section>", "<group>"],
+            "answer": 0
+          },
+          {
+            "question": "¿Qué elemento HTML es adecuado para resaltar una cita textual larga?",
+            "options": ["<cite>", "<blockquote>", "<quote>", "<q>"],
+            "answer": 1
+          },
+          {
+            "question": "¿Cuál es el propósito del atributo 'charset' en una etiqueta <meta>?",
+            "options": [
+              "Especificar la codificación de caracteres del documento.",
+              "Definir las palabras clave para los motores de búsqueda.",
+              "Controlar la escala de la página en dispositivos móviles.",
+              "Indicar la autoría del documento."
+            ],
+            "answer": 0
+          },
+          {
+            "question": "¿Cuál es el atributo adecuado para especificar un texto de sugerencia dentro de un campo de entrada?",
+            "options": ["tooltip", "label", "hint", "placeholder"],
+            "answer": 3
+          }
+        ]
+      }
     },
     {
       "title": "CSS",
       "icon": "/images/icon-css.svg",
-      "questions": [
-        {
-          "question": "¿Qué significa CSS?",
-          "options": [
-            "Colorful Style Sheets",
-            "Computer Style Sheets",
-            "Cascading Style Sheets",
-            "Creative Style Sheets"
-          ],
-          "answer": 2
-        },
-        {
-          "question": "¿Qué atributo HTML se utiliza para definir estilos en línea?",
-          "options": ["styles", "style", "class", "font-style"],
-          "answer": 1
-        },
-        {
-          "question": "¿Cómo se inserta un comentario en un archivo CSS?",
-          "options": [
-            "// este es un comentario //",
-            "/* este es un comentario */",
-            "-- este es un comentario --",
-            "<!-- este es un comentario -->"
-          ],
-          "answer": 1
-        },
-        {
-          "question": "¿Qué propiedad se utiliza para cambiar el color de fondo de un elemento?",
-          "options": ["color", "bgcolor", "background-color", "background"],
-          "answer": 2
-        },
-        {
-          "question": "¿Cómo aplicas un estilo a todos los elementos <p>?",
-          "options": ["p { }", ".p { }", "#p { }", "all.p { }"],
-          "answer": 0
-        },
-        {
-          "question": "¿Qué propiedad se utiliza para cambiar la fuente de un elemento?",
-          "options": ["font-style", "text-style", "font-family", "typeface"],
-          "answer": 2
-        },
-        {
-          "question": "¿Cómo haces que cada palabra en un texto comience con una letra mayúscula?",
-          "options": [
-            "text-transform: capitalize",
-            "text-transform: uppercase",
-            "text-style: capital",
-            "font-transform: capitalize"
-          ],
-          "answer": 0
-        },
-        {
-          "question": "¿Cómo seleccionas un elemento con el nombre de clase 'header'?",
-          "options": [".header", "#header", "header", "*header"],
-          "answer": 0
-        },
-        {
-          "question": "¿Cuál es el valor predeterminado de la propiedad 'position'?",
-          "options": ["relative", "fixed", "absolute", "static"],
-          "answer": 3
-        },
-        {
-          "question": "¿Cuál es el propósito de la propiedad z-index en CSS?",
-          "options": [
-            "Contar el número de elementos",
-            "Establecer el nivel de aumento de un elemento",
-            "Especificar el orden de apilamiento de un elemento",
-            "Crear un efecto de zoom"
-          ],
-          "answer": 2
-        }
-      ]
+      "questions": {
+        "begginer": [
+          {
+            "question": "¿Qué significa CSS?",
+            "options": [
+              "Colorful Style Sheets",
+              "Computer Style Sheets",
+              "Cascading Style Sheets",
+              "Creative Style Sheets"
+            ],
+            "answer": 2
+          },
+          {
+            "question": "¿Qué atributo HTML se utiliza para definir estilos en línea?",
+            "options": ["styles", "style", "class", "font-style"],
+            "answer": 1
+          },
+          {
+            "question": "¿Cómo se inserta un comentario en un archivo CSS?",
+            "options": [
+              "// este es un comentario //",
+              "/* este es un comentario */",
+              "-- este es un comentario --",
+              "<!-- este es un comentario -->"
+            ],
+            "answer": 1
+          },
+          {
+            "question": "¿Qué propiedad se utiliza para cambiar el color de fondo de un elemento?",
+            "options": ["color", "bgcolor", "background-color", "background"],
+            "answer": 2
+          },
+          {
+            "question": "¿Cómo aplicas un estilo a todos los elementos <p>?",
+            "options": ["p { }", ".p { }", "#p { }", "all.p { }"],
+            "answer": 0
+          },
+          {
+            "question": "¿Qué propiedad se utiliza para cambiar la fuente de un elemento?",
+            "options": ["font-style", "text-style", "font-family", "typeface"],
+            "answer": 2
+          },
+          {
+            "question": "¿Cómo haces que cada palabra en un texto comience con una letra mayúscula?",
+            "options": [
+              "text-transform: capitalize",
+              "text-transform: uppercase",
+              "text-style: capital",
+              "font-transform: capitalize"
+            ],
+            "answer": 0
+          },
+          {
+            "question": "¿Cómo seleccionas un elemento con el nombre de clase 'header'?",
+            "options": [".header", "#header", "header", "*header"],
+            "answer": 0
+          },
+          {
+            "question": "¿Cuál es el valor predeterminado de la propiedad 'position'?",
+            "options": ["relative", "fixed", "absolute", "static"],
+            "answer": 3
+          },
+          {
+            "question": "¿Cuál es el propósito de la propiedad z-index en CSS?",
+            "options": [
+              "Contar el número de elementos",
+              "Establecer el nivel de aumento de un elemento",
+              "Especificar el orden de apilamiento de un elemento",
+              "Crear un efecto de zoom"
+            ],
+            "answer": 2
+          }
+        ],
+        "advanced": [
+          {
+            "question": "¿Cuál es la diferencia entre las propiedades 'margin' y 'padding' en CSS?",
+            "options": [
+              "'margin' define el espacio exterior alrededor de un elemento, mientras que 'padding' define el espacio interior entre el borde del elemento y su contenido.",
+              "'padding' define el espacio exterior alrededor de un elemento, mientras que 'margin' define el espacio interior entre el borde del elemento y su contenido.",
+              "'margin' y 'padding' son sinónimos y pueden usarse indistintamente.",
+              "'margin' define el espacio interno del elemento, mientras que 'padding' define el espacio externo."
+            ],
+            "answer": 0
+          },
+          {
+            "question": "¿Qué hace la propiedad 'z-index' en CSS?",
+            "options": [
+              "Define el índice de fuente del texto en un elemento.",
+              "Establece el nivel de opacidad de un elemento.",
+              "Controla el apilamiento de elementos posicionados en el eje Z (profundidad).",
+              "Controla la alineación del texto dentro de un elemento."
+            ],
+            "answer": 2
+          },
+          {
+            "question": "¿Cómo se define un color en CSS usando la notación hexadecimal?",
+            "options": [
+              "Con un valor hexadecimal precedido por '@', como '@ff5733'.",
+              "Con un valor hexadecimal precedido por '#', como '#ff5733'.",
+              "Con un valor hexadecimal precedido por '0x', como '0xff5733'.",
+              "Con un valor hexadecimal precedido por 'hex', como 'hex#ff5733'."
+            ],
+            "answer": 1
+          },
+          {
+            "question": "¿Qué propiedad CSS se usa para cambiar el estilo de las listas?",
+            "options": [
+              "list-format",
+              "list-type",
+              "list-style",
+              "list-decoration"
+            ],
+            "answer": 2
+          },
+          {
+            "question": "¿Cuál es la función de la propiedad 'display: flex' en CSS?",
+            "options": [
+              "Permite diseñar elementos en una estructura de contenedor flexible.",
+              "Oculta un elemento de la página.",
+              "Aplica un estilo de fuente a un elemento.",
+              "Define la forma en que un elemento se ajusta al tamaño del contenedor."
+            ],
+            "answer": 0
+          },
+          {
+            "question": "¿Qué hace la propiedad 'overflow' en CSS?",
+            "options": [
+              "Ajusta el margen de un elemento.",
+              "Controla cómo se maneja el contenido que desborda el área de un contenedor.",
+              "Define la alineación del texto dentro de un elemento.",
+              "Controla el apilamiento de los elementos en el eje Z."
+            ],
+            "answer": 1
+          },
+          {
+            "question": "¿Cómo se puede aplicar una sombra a un elemento en CSS?",
+            "options": [
+              "Usando la propiedad 'shadow'.",
+              "Usando la propiedad 'border-shadow'.",
+              "Usando la propiedad 'text-shadow'.",
+              "Usando la propiedad 'box-shadow'."
+            ],
+            "answer": 3
+          },
+          {
+            "question": "¿Qué propiedad CSS se usa para definir la fuente del texto?",
+            "options": [
+              "text-style",
+              "font-family",
+              "font-type",
+              "font-weight"
+            ],
+            "answer": 1
+          },
+          {
+            "question": "¿Cuál es la función de la propiedad 'position: absolute' en CSS?",
+            "options": [
+              "Posiciona un elemento de forma absoluta respecto a su primer contenedor posicionado.",
+              "Posiciona un elemento de forma relativa respecto a su posición original.",
+              "Posiciona un elemento en el flujo normal del documento.",
+              "Posiciona un elemento al final del contenedor padre."
+            ],
+            "answer": 0
+          },
+          {
+            "question": "¿Qué hace la propiedad 'float' en CSS?",
+            "options": [
+              "Alinea un elemento verticalmente en el centro de su contenedor.",
+              "Permite que un elemento se desplace a la izquierda o derecha dentro de su contenedor.",
+              "Establece el tamaño de fuente de un elemento.",
+              "Define el borde de un elemento."
+            ],
+            "answer": 1
+          },
+          {
+            "question": "¿Qué propiedad CSS se usa para establecer el espaciado entre letras en un texto?",
+            "options": [
+              "letter-spacing",
+              "text-spacing",
+              "word-spacing",
+              "line-height"
+            ],
+            "answer": 0
+          },
+          {
+            "question": "¿Qué propiedad CSS se usa para alinear texto horizontalmente dentro de un contenedor?",
+            "options": [
+              "text-justify",
+              "text-align",
+              "text-center",
+              "align-text"
+            ],
+            "answer": 1
+          },
+          {
+            "question": "¿Cómo se aplica un estilo a un elemento cuando el ratón está sobre él?",
+            "options": [
+              "Usando el pseudo-clase ':hover'.",
+              "Usando el pseudo-clase ':active'.",
+              "Usando el pseudo-clase ':focus'.",
+              "Usando el pseudo-clase ':visited'."
+            ],
+            "answer": 0
+          },
+          {
+            "question": "¿Qué propiedad CSS se usa para ajustar el tamaño de una imagen para que se ajuste al tamaño del contenedor?",
+            "options": [
+              "object-fit",
+              "background-size",
+              "image-fit",
+              "size-adjust"
+            ],
+            "answer": 0
+          },
+          {
+            "question": "¿Cuál es la función de la propiedad 'box-sizing' en CSS?",
+            "options": [
+              "Controla cómo se calculan el ancho y alto de un elemento, incluyendo el padding y el borde.",
+              "Define el tipo de borde para un elemento.",
+              "Establece el tamaño del margen de un elemento.",
+              "Controla el tamaño de fuente de un elemento."
+            ],
+            "answer": 0
+          },
+          {
+            "question": "¿Qué propiedad CSS se utiliza para ocultar un elemento de la página sin eliminarlo del flujo del documento?",
+            "options": [
+              "display: none;",
+              "opacity: 0;",
+              "visibility: hidden;",
+              "position: absolute;"
+            ],
+            "answer": 2
+          },
+          {
+            "question": "¿Cómo se puede aplicar una sombra de texto en CSS?",
+            "options": [
+              "Usando la propiedad 'text-shadow'.",
+              "Usando la propiedad 'shadow-text'.",
+              "Usando la propiedad 'font-shadow'.",
+              "Usando la propiedad 'shadow'."
+            ],
+            "answer": 0
+          },
+          {
+            "question": "¿Qué hace la propiedad 'clip-path' en CSS?",
+            "options": [
+              "Define un borde alrededor de un elemento.",
+              "Ajusta el tamaño de un elemento.",
+              "Permite recortar un elemento en una forma específica.",
+              "Aplica un filtro a un elemento."
+            ],
+            "answer": 2
+          },
+          {
+            "question": "¿Cuál es la función de la propiedad 'grid-template-areas' en CSS Grid?",
+            "options": [
+              "Establece el tamaño de las áreas en una cuadrícula.",
+              "Define un diseño de cuadrícula mediante nombres de áreas.",
+              "Controla el espaciado entre elementos en una cuadrícula.",
+              "Ajusta el borde de las áreas en una cuadrícula."
+            ],
+            "answer": 1
+          },
+          {
+            "question": "¿Cómo se aplica un diseño en columnas usando CSS Flexbox?",
+            "options": [
+              "Usando la propiedad 'display: column'.",
+              "Usando la propiedad 'flex: column'.",
+              "Usando la propiedad 'direction: column'.",
+              "Usando la propiedad 'flex-direction: column'."
+            ],
+            "answer": 3
+          }
+        ]
+      }
     },
     {
       "title": "JavaScript",
       "icon": "/images/icon-js.svg",
-      "questions": [
-        {
-          "question": "¿Cuál es la sintaxis correcta para mostrar 'Hello World' en un cuadro de alerta?",
-          "options": [
-            "alertBox('Hello World');",
-            "msg('Hello World');",
-            "alert('Hello World');",
-            "msgBox('Hello World');"
-          ],
-          "answer": 2
-        },
-        {
-          "question": "¿Cómo invocas a una función llamada 'myFunction'?",
-          "options": [
-            "call function myFunction()",
-            "call myFunction()",
-            "myFunction()",
-            "execute myFunction()"
-          ],
-          "answer": 2
-        },
-        {
-          "question": "¿Cómo se escribe una declaración IF en JavaScript?",
-          "options": ["if i = 5 then", "if (i == 5)", "if i == 5", "if i = 5"],
-          "answer": 1
-        },
-        {
-          "question": "¿Cómo se escribe una declaración IF para ejecutar código si 'i' NO es igual a 5?",
-          "options": [
-            "if (i <> 5)",
-            "if i =! 5 then",
-            "if (i != 5)",
-            "if i not = 5"
-          ],
-          "answer": 2
-        },
-        {
-          "question": "¿Cómo comienza un bucle FOR?",
-          "options": [
-            "for (i = 0; i <= 5)",
-            "for i = 1 to 5",
-            "for (i <= 5; i++)",
-            "for (i = 0; i <= 5; i++)"
-          ],
-          "answer": 3
-        },
-        {
-          "question": "¿Cómo puedes agregar un comentario en JavaScript?",
-          "options": [
-            "'This is a comment",
-            "//This is a comment",
-            "<!--This is a comment-->",
-            "/* This is a comment */"
-          ],
-          "answer": 1
-        },
-        {
-          "question": "¿Cuál es la forma correcta de crear un arreglo en JavaScript?",
-          "options": [
-            "const colors = (1:'red', 2:'green', 3:'blue')",
-            "const colors = ['red', 'green', 'blue']",
-            "let colors = 'red', 'green', 'blue'",
-            "var colors = 1 = ('red'), 2 = ('green'), 3 = ('blue')"
-          ],
-          "answer": 1
-        },
-        {
-          "question": "¿Cómo encuentras el número con el valor más alto entre x e y?",
-          "options": [
-            "Math.ceil(x, y)",
-            "top(x, y)",
-            "Math.max(x, y)",
-            "Math.highest(x, y)"
-          ],
-          "answer": 2
-        },
-        {
-          "question": "¿Qué operador se utiliza para asignar un valor a una variable?",
-          "options": ["-", "*", "=", "x"],
-          "answer": 2
-        },
-        {
-          "question": "¿Cuál es la forma correcta de crear un objeto en JavaScript?",
-          "options": [
-            "let person = {firstName: 'John', lastName: 'Doe'};",
-            "const person = {firstName = 'John', lastName = 'Doe'};",
-            "let person = (firstName: 'John', lastName: 'Doe');",
-            "var person = (firstName = 'John', lastName = 'Doe');"
-          ],
-          "answer": 0
-        }
-      ]
+      "questions": {
+        "begginer": [
+          {
+            "question": "¿Cuál es la sintaxis correcta para mostrar 'Hello World' en un cuadro de alerta?",
+            "options": [
+              "alertBox('Hello World');",
+              "msg('Hello World');",
+              "alert('Hello World');",
+              "msgBox('Hello World');"
+            ],
+            "answer": 2
+          },
+          {
+            "question": "¿Cómo invocas a una función llamada 'myFunction'?",
+            "options": [
+              "call function myFunction()",
+              "call myFunction()",
+              "myFunction()",
+              "execute myFunction()"
+            ],
+            "answer": 2
+          },
+          {
+            "question": "¿Cómo se escribe una declaración IF en JavaScript?",
+            "options": [
+              "if i = 5 then",
+              "if (i == 5)",
+              "if i == 5",
+              "if i = 5"
+            ],
+            "answer": 1
+          },
+          {
+            "question": "¿Cómo se escribe una declaración IF para ejecutar código si 'i' NO es igual a 5?",
+            "options": [
+              "if (i <> 5)",
+              "if i =! 5 then",
+              "if (i != 5)",
+              "if i not = 5"
+            ],
+            "answer": 2
+          },
+          {
+            "question": "¿Cómo comienza un bucle FOR?",
+            "options": [
+              "for (i = 0; i <= 5)",
+              "for i = 1 to 5",
+              "for (i <= 5; i++)",
+              "for (i = 0; i <= 5; i++)"
+            ],
+            "answer": 3
+          },
+          {
+            "question": "¿Cómo puedes agregar un comentario en JavaScript?",
+            "options": [
+              "'This is a comment",
+              "//This is a comment",
+              "<!--This is a comment-->",
+              "/* This is a comment */"
+            ],
+            "answer": 1
+          },
+          {
+            "question": "¿Cuál es la forma correcta de crear un arreglo en JavaScript?",
+            "options": [
+              "const colors = (1:'red', 2:'green', 3:'blue')",
+              "const colors = ['red', 'green', 'blue']",
+              "let colors = 'red', 'green', 'blue'",
+              "var colors = 1 = ('red'), 2 = ('green'), 3 = ('blue')"
+            ],
+            "answer": 1
+          },
+          {
+            "question": "¿Cómo encuentras el número con el valor más alto entre x e y?",
+            "options": [
+              "Math.ceil(x, y)",
+              "top(x, y)",
+              "Math.max(x, y)",
+              "Math.highest(x, y)"
+            ],
+            "answer": 2
+          },
+          {
+            "question": "¿Qué operador se utiliza para asignar un valor a una variable?",
+            "options": ["-", "*", "=", "x"],
+            "answer": 2
+          },
+          {
+            "question": "¿Cuál es la forma correcta de crear un objeto en JavaScript?",
+            "options": [
+              "let person = {firstName: 'John', lastName: 'Doe'};",
+              "const person = {firstName = 'John', lastName = 'Doe'};",
+              "let person = (firstName: 'John', lastName: 'Doe');",
+              "var person = (firstName = 'John', lastName = 'Doe');"
+            ],
+            "answer": 0
+          }
+        ],
+        "advanced": [
+          {
+            "question": "¿Qué hace el método 'bind()' en JavaScript?",
+            "options": [
+              "Crea una nueva función que, cuando se llama, tiene su palabra clave 'this' establecida en un valor específico.",
+              "Enlaza dos objetos para que compartan las mismas propiedades.",
+              "Aplica una función a cada elemento de un array.",
+              "Define una nueva propiedad en un objeto."
+            ],
+            "answer": 0
+          },
+          {
+            "question": "¿Cómo se declara una función de manera que pueda ser utilizada como expresión de función?",
+            "options": [
+              "function expression() {}",
+              "const expression = function() {};",
+              "function = expression() {}",
+              "var expression = new Function();"
+            ],
+            "answer": 1
+          },
+          {
+            "question": "¿Qué es un closure en JavaScript?",
+            "options": [
+              "Una función que recuerda el entorno en el que fue creada.",
+              "Un objeto que contiene datos y métodos.",
+              "Un tipo de bucle que se repite hasta que una condición se cumple.",
+              "Un método que convierte un array en una cadena de texto."
+            ],
+            "answer": 0
+          },
+          {
+            "question": "¿Qué hace el operador '===' en JavaScript?",
+            "options": [
+              "Compara solo el valor de dos variables.",
+              "Asigna el valor de una variable a otra.",
+              "Verifica si dos variables son diferentes.",
+              "Compara tanto el valor como el tipo de dos variables."
+            ],
+            "answer": 3
+          },
+          {
+            "question": "¿Cuál es el propósito de la función 'Array.prototype.map()'?",
+            "options": [
+              "Modifica el array original aplicando una función a cada elemento.",
+              "Crea un nuevo array con los resultados de aplicar una función a cada elemento del array original.",
+              "Ordena los elementos del array en orden ascendente.",
+              "Filtra los elementos del array según una condición."
+            ],
+            "answer": 1
+          },
+          {
+            "question": "¿Cómo se maneja un error en una promesa en JavaScript?",
+            "options": [
+              "Usando el método '.catch()'.",
+              "Usando el método '.finally()'.",
+              "Usando el método '.resolve()'.",
+              "Usando el método '.then()'."
+            ],
+            "answer": 0
+          },
+          {
+            "question": "¿Cuál es el propósito de la palabra clave 'async' en una función?",
+            "options": [
+              "Marca una función como asincrónica y permite el uso de 'await' dentro de ella.",
+              "Indica que una función se ejecutará en paralelo con otras funciones.",
+              "Declara una función que puede ser llamada solo una vez.",
+              "Permite que una función devuelva un valor inmediatamente sin esperar a que se resuelva."
+            ],
+            "answer": 0
+          },
+          {
+            "question": "¿Cómo se puede definir una función que acepta un número indefinido de argumentos en JavaScript?",
+            "options": [
+              "Usando el operador spread (...).",
+              "Usando el método 'arguments'.",
+              "Usando el operador rest (...args).",
+              "Usando una función de flecha."
+            ],
+            "answer": 2
+          },
+          {
+            "question": "¿Cuál es la diferencia entre 'null' y 'undefined' en JavaScript?",
+            "options": [
+              "'null' es un valor asignado explícitamente para indicar ausencia de valor, mientras que 'undefined' significa que una variable no ha sido inicializada.",
+              "'undefined' es un valor asignado explícitamente para indicar ausencia de valor, mientras que 'null' significa que una variable no ha sido inicializada.",
+              "'null' y 'undefined' son sinónimos y se usan de manera intercambiable.",
+              "'null' y 'undefined' tienen el mismo propósito, pero se usan en diferentes contextos."
+            ],
+            "answer": 0
+          },
+          {
+            "question": "¿Qué método de los arrays en JavaScript se usa para añadir uno o más elementos al final del array?",
+            "options": ["pop()", "shift()", "unshift()", "push()"],
+            "answer": 3
+          },
+          {
+            "question": "¿Cuál es el propósito del método 'Object.keys()'?",
+            "options": [
+              "Devuelve un array con los valores de un objeto.",
+              "Crea un nuevo objeto a partir de un array.",
+              "Devuelve un array con las claves de un objeto.",
+              "Asigna un nuevo valor a una clave específica en un objeto."
+            ],
+            "answer": 2
+          },
+          {
+            "question": "¿Qué hace el operador 'instanceof' en JavaScript?",
+            "options": [
+              "Verifica si un objeto es una instancia de un constructor específico.",
+              "Compara el valor de dos objetos.",
+              "Determina si un objeto es un array.",
+              "Convierte un objeto en una instancia de un constructor."
+            ],
+            "answer": 0
+          },
+          {
+            "question": "¿Qué es el 'hoisting' en JavaScript?",
+            "options": [
+              "El comportamiento por el cual las declaraciones de variables y funciones se mueven al inicio de su ámbito durante la fase de compilación.",
+              "La capacidad de una función para invocar otras funciones.",
+              "El proceso de definir variables dentro de un bloque de código.",
+              "La técnica para almacenar datos en memoria temporalmente."
+            ],
+            "answer": 0
+          },
+          {
+            "question": "¿Cómo se puede evitar que un objeto sea modificado en JavaScript?",
+            "options": [
+              "Usando el método 'Object.seal()'.",
+              "Usando el método 'Object.freeze()'.",
+              "Usando la palabra clave 'const'.",
+              "Usando la palabra clave 'let'."
+            ],
+            "answer": 1
+          },
+          {
+            "question": "¿Qué es el 'destructuring' en JavaScript?",
+            "options": [
+              "Una técnica para modificar el contenido de un array.",
+              "Una forma de extraer valores de arrays o propiedades de objetos en variables distintas.",
+              "Un método para fusionar dos objetos en uno.",
+              "Un proceso para convertir una cadena de texto en un objeto."
+            ],
+            "answer": 1
+          },
+          {
+            "question": "¿Cómo se define un método de clase en JavaScript?",
+            "options": [
+              "Dentro de una clase usando la sintaxis de método, sin la palabra clave 'function'.",
+              "Dentro de una clase usando la palabra clave 'function'.",
+              "Usando la palabra clave 'class' y la sintaxis 'function() {}' dentro de la clase.",
+              "Definiendo una propiedad de objeto que es una función."
+            ],
+            "answer": 0
+          },
+          {
+            "question": "¿Qué hace el método 'Array.prototype.reduce()'?",
+            "options": [
+              "Ordena los elementos del array en orden ascendente.",
+              "Devuelve un nuevo array con los elementos filtrados según una condición.",
+              "Aplica una función a un acumulador y a cada valor del array (de izquierda a derecha) para reducirlo a un solo valor.",
+              "Concatena todos los elementos del array en una cadena de texto."
+            ],
+            "answer": 2
+          },
+          {
+            "question": "¿Cómo se accede a la propiedad de un objeto usando la notación de corchetes?",
+            "options": [
+              "Usando 'objeto[propiedad]'.",
+              "Usando 'objeto.propiedad'.",
+              "Usando 'propiedad[objeto]'.",
+              "Usando 'objeto::propiedad'."
+            ],
+            "answer": 0
+          },
+          {
+            "question": "¿Qué es un 'promise' en JavaScript?",
+            "options": [
+              "Una función que retorna un valor inmediato.",
+              "Un mecanismo para sincronizar múltiples operaciones asincrónicas.",
+              "Un tipo especial de función que se ejecuta en paralelo con otras funciones.",
+              "Un objeto que representa la eventual finalización (o falla) de una operación asincrónica y su valor resultante."
+            ],
+            "answer": 3
+          },
+          {
+            "question": "¿Qué hace el método 'String.prototype.split()' en JavaScript?",
+            "options": [
+              "Une todos los caracteres de una cadena en una sola cadena.",
+              "Corta una cadena en una posición específica.",
+              "Divide una cadena de texto en un array de substrings basados en un delimitador.",
+              "Transforma una cadena en mayúsculas o minúsculas."
+            ],
+            "answer": 2
+          }
+        ]
+      }
     },
     {
       "title": "Bootstrap",
       "icon": "/images/icon-bootstrap.svg",
-      "questions": [
-        {
-          "question": "¿Qué es Bootstrap?",
-          "options": [
-            "Un framework de CSS",
-            "Un lenguaje de programación",
-            "Una base de datos",
-            "Un servidor web"
-          ],
-          "answer": 0
-        },
-        {
-          "question": "¿Qué clase se usa para centrar el texto en Bootstrap?",
-          "options": [
-            "center-text",
-            "align-center",
-            "text-align-center",
-            "text-center"
-          ],
-          "answer": 3
-        },
-        {
-          "question": "¿Qué clase de Bootstrap se usa para un botón primario?",
-          "options": ["btn-main", "btn-primary", "btn-default", "btn-first"],
-          "answer": 1
-        },
-        {
-          "question": "¿Cómo defines una fila en Bootstrap?",
-          "options": ["row", "container", "col", "line"],
-          "answer": 0
-        },
-        {
-          "question": "¿Qué clase hace que una imagen sea responsiva en Bootstrap?",
-          "options": [
-            "img-responsive",
-            "responsive-img",
-            "img-fluid",
-            "img-adaptable"
-          ],
-          "answer": 2
-        },
-        {
-          "question": "¿Qué clase añade padding a un elemento en Bootstrap?",
-          "options": ["pad-3", "p-3", "padding-3", "space-3"],
-          "answer": 1
-        },
-        {
-          "question": "¿Qué clase de Bootstrap se utiliza para crear una barra de navegación?",
-          "options": ["navbar", "navigation-bar", "nav-bar", "navbar-menu"],
-          "answer": 0
-        },
-        {
-          "question": "¿Cómo creas una columna que ocupe 6 de las 12 partes en Bootstrap?",
-          "options": ["col-md-6", "col-half", "column-6", "col-6"],
-          "answer": 3
-        },
-        {
-          "question": "¿Qué clase se usa para ocultar un elemento en pantallas pequeñas en Bootstrap?",
-          "options": [
-            "hidden-sm",
-            "d-none d-sm-block",
-            "hide-xs",
-            "invisible-xs"
-          ],
-          "answer": 1
-        },
-        {
-          "question": "¿Qué clase se utiliza para alinear elementos horizontalmente en el flexbox de Bootstrap?",
-          "options": [
-            "align-items-center",
-            "center-horizontal",
-            "justify-content-center",
-            "horizontal-align"
-          ],
-          "answer": 2
-        }
-      ]
+      "questions": {
+        "begginer": [
+          {
+            "question": "¿Qué es Bootstrap?",
+            "options": [
+              "Un framework de CSS",
+              "Un lenguaje de programación",
+              "Una base de datos",
+              "Un servidor web"
+            ],
+            "answer": 0
+          },
+          {
+            "question": "¿Qué clase se usa para centrar el texto en Bootstrap?",
+            "options": [
+              "center-text",
+              "align-center",
+              "text-align-center",
+              "text-center"
+            ],
+            "answer": 3
+          },
+          {
+            "question": "¿Qué clase de Bootstrap se usa para un botón primario?",
+            "options": ["btn-main", "btn-primary", "btn-default", "btn-first"],
+            "answer": 1
+          },
+          {
+            "question": "¿Cómo defines una fila en Bootstrap?",
+            "options": ["row", "container", "col", "line"],
+            "answer": 0
+          },
+          {
+            "question": "¿Qué clase hace que una imagen sea responsiva en Bootstrap?",
+            "options": [
+              "img-responsive",
+              "responsive-img",
+              "img-fluid",
+              "img-adaptable"
+            ],
+            "answer": 2
+          },
+          {
+            "question": "¿Qué clase añade padding a un elemento en Bootstrap?",
+            "options": ["pad-3", "p-3", "padding-3", "space-3"],
+            "answer": 1
+          },
+          {
+            "question": "¿Qué clase de Bootstrap se utiliza para crear una barra de navegación?",
+            "options": ["navbar", "navigation-bar", "nav-bar", "navbar-menu"],
+            "answer": 0
+          },
+          {
+            "question": "¿Cómo creas una columna que ocupe 6 de las 12 partes en Bootstrap?",
+            "options": ["col-md-6", "col-half", "column-6", "col-6"],
+            "answer": 3
+          },
+          {
+            "question": "¿Qué clase se usa para ocultar un elemento en pantallas pequeñas en Bootstrap?",
+            "options": [
+              "hidden-sm",
+              "d-none d-sm-block",
+              "hide-xs",
+              "invisible-xs"
+            ],
+            "answer": 1
+          },
+          {
+            "question": "¿Qué clase se utiliza para alinear elementos horizontalmente en el flexbox de Bootstrap?",
+            "options": [
+              "align-items-center",
+              "center-horizontal",
+              "justify-content-center",
+              "horizontal-align"
+            ],
+            "answer": 2
+          }
+        ],
+        "advanced": [
+          {
+            "question": "¿Qué clase de Bootstrap se utiliza para ocultar un elemento en pantallas pequeñas pero mostrarlo en pantallas medianas y grandes?",
+            "options": [
+              "d-none d-md-block",
+              "d-block d-md-none",
+              "hidden-md",
+              "d-md-hide"
+            ],
+            "answer": 0
+          },
+          {
+            "question": "¿Cómo se definen los colores personalizados en Bootstrap?",
+            "options": [
+              "Usando la clase 'text-color' para cada color.",
+              "Modificando directamente el archivo CSS de Bootstrap.",
+              "Aplicando estilos en línea con la propiedad 'color'.",
+              "Utilizando variables SCSS en un archivo de configuración."
+            ],
+            "answer": 3
+          },
+          {
+            "question": "¿Cuál es el propósito del sistema de rejilla (grid system) en Bootstrap?",
+            "options": [
+              "Aplicar estilos específicos a elementos de la página.",
+              "Organizar el contenido en una estructura de columnas y filas para un diseño responsive.",
+              "Definir el tamaño y tipo de fuente en una página.",
+              "Crear efectos de animación en los elementos de la página."
+            ],
+            "answer": 1
+          },
+          {
+            "question": "¿Cómo se puede cambiar el tamaño de un botón en Bootstrap?",
+            "options": [
+              "Usando las clases 'btn-size-lg', 'btn-size-sm', y 'btn-size-xs'.",
+              "Aplicando las clases 'btn-large', 'btn-medium', y 'btn-small'.",
+              "Usando las clases 'btn-lg', 'btn-sm', y 'btn-xs'.",
+              "Modificando la propiedad 'font-size' en el CSS del botón."
+            ],
+            "answer": 2
+          },
+          {
+            "question": "¿Qué clase de Bootstrap se utiliza para crear un formulario en columnas?",
+            "options": ["row g-3", "form-row", "form-group", "col-form"],
+            "answer": 1
+          },
+          {
+            "question": "¿Cómo se usa el componente 'alert' de Bootstrap para mostrar una alerta con el color de fondo personalizado?",
+            "options": [
+              "Modificando el estilo de la alerta usando la propiedad 'background-color'.",
+              "Añadiendo una clase de alerta con color, como 'alert-primary', 'alert-secondary', etc.",
+              "Usando la clase 'alert-custom' con un color definido en CSS.",
+              "Aplicando la clase 'alert-color' y el color deseado en el CSS."
+            ],
+            "answer": 1
+          },
+          {
+            "question": "¿Qué clase de Bootstrap se utiliza para mostrar una imagen de manera responsive?",
+            "options": [
+              "img-fluid",
+              "img-responsive",
+              "img-cover",
+              "img-resize"
+            ],
+            "answer": 0
+          },
+          {
+            "question": "¿Cómo se pueden crear tarjetas (cards) en Bootstrap con un borde y sombra personalizados?",
+            "options": [
+              "Aplicando las clases 'border-card' y 'shadow-card' directamente.",
+              "Modificando las propiedades 'border' y 'box-shadow' en CSS para las tarjetas.",
+              "Usando las clases 'card border' y 'card shadow', y luego personalizando con CSS.",
+              "Añadiendo las clases 'card-bordered' y 'card-shadow' en el HTML."
+            ],
+            "answer": 2
+          },
+          {
+            "question": "¿Qué clase de Bootstrap se utiliza para alinear texto en el centro de un contenedor?",
+            "options": [
+              "text-center",
+              "align-center",
+              "center-text",
+              "text-align-center"
+            ],
+            "answer": 0
+          },
+          {
+            "question": "¿Cómo se pueden crear botones de grupo en Bootstrap?",
+            "options": [
+              "Utilizando la clase 'button-group' y añadiendo botones dentro de un contenedor.",
+              "Aplicando la clase 'btn-stack' para agrupar botones verticalmente.",
+              "Usando la clase 'btn-group' para agrupar varios botones.",
+              "Usando 'btn-container' para alinear varios botones en una fila."
+            ],
+            "answer": 2
+          },
+          {
+            "question": "¿Qué clase de Bootstrap se utiliza para aplicar un espaciado vertical (padding) a un elemento?",
+            "options": [
+              "padding-{size}",
+              "spacing-{size}",
+              "m-{size}",
+              "p-{breakpoint}-{size}"
+            ],
+            "answer": 3
+          },
+          {
+            "question": "¿Qué clase de Bootstrap se utiliza para ocultar el contenido en dispositivos grandes y mostrarlo en dispositivos pequeños?",
+            "options": [
+              "d-lg-none d-block",
+              "d-none d-lg-block",
+              "d-block d-lg-none",
+              "d-sm-block d-lg-none"
+            ],
+            "answer": 2
+          },
+          {
+            "question": "¿Cómo se puede crear una barra de navegación (navbar) que sea fija en la parte superior de la página?",
+            "options": [
+              "Usando la clase 'navbar-fixed-top'.",
+              "Usando la clase 'fixed-top'.",
+              "Aplicando 'navbar-top-fixed' en el CSS.",
+              "Añadiendo 'navbar-static-top' en la clase."
+            ],
+            "answer": 1
+          },
+          {
+            "question": "¿Qué clase de Bootstrap se utiliza para mostrar un modal?",
+            "options": ["modal-show", "modal-visible", "show", "modal"],
+            "answer": 3
+          },
+          {
+            "question": "¿Cómo se puede crear un layout con columnas iguales usando el sistema de rejilla de Bootstrap?",
+            "options": [
+              "Utilizando 'col' dentro de un contenedor 'row'.",
+              "Aplicando la clase 'column-equal' en las columnas.",
+              "Usando 'col-md-6' para cada columna en un contenedor.",
+              "Definiendo 'col-equal' en el CSS para las columnas."
+            ],
+            "answer": 0
+          },
+          {
+            "question": "¿Qué clase de Bootstrap se utiliza para alinear el contenido dentro de un contenedor de tarjetas (card)?",
+            "options": [
+              "card-body",
+              "card-content",
+              "card-text",
+              "card-header"
+            ],
+            "answer": 0
+          },
+          {
+            "question": "¿Cómo se pueden crear listas de navegación horizontales en Bootstrap?",
+            "options": [
+              "Usando la clase 'nav' junto con 'nav-horizontal'.",
+              "Aplicando la clase 'nav' y 'nav-pills' con 'flex-row'.",
+              "Utilizando 'nav-horizontal' y 'nav-list'.",
+              "Añadiendo 'nav-pills' y 'nav-horizontal' en el CSS."
+            ],
+            "answer": 1
+          },
+          {
+            "question": "¿Qué clase de Bootstrap se usa para establecer el ancho de un elemento en el sistema de rejilla?",
+            "options": [
+              "col-{breakpoint}-{size}",
+              "width-{size}",
+              "grid-{size}",
+              "container-{size}"
+            ],
+            "answer": 0
+          },
+          {
+            "question": "¿Cómo se puede aplicar un estilo de color de fondo a un contenedor en Bootstrap?",
+            "options": [
+              "Aplicando la clase 'background-color' en el CSS.",
+              "Definiendo un color de fondo en un archivo SCSS.",
+              "Usando clases como 'bg-primary', 'bg-secondary', etc.",
+              "Usando la propiedad 'background' directamente en el CSS."
+            ],
+            "answer": 2
+          },
+          {
+            "question": "¿Qué clase de Bootstrap se utiliza para crear una tabla con un diseño responsivo?",
+            "options": [
+              "table-responsive",
+              "responsive-table",
+              "table-fluid",
+              "table-fixed"
+            ],
+            "answer": 0
+          },
+          {
+            "question": "¿Cómo se puede crear un formulario con un diseño en línea usando Bootstrap?",
+            "options": [
+              "Usando la clase 'inline-form' para el formulario.",
+              "Definiendo 'form-row-inline' en el CSS del formulario.",
+              "Añadiendo 'form-inline' a cada campo del formulario.",
+              "Aplicando la clase 'form-inline' al contenedor del formulario."
+            ],
+            "answer": 3
+          },
+          {
+            "question": "¿Qué clase de Bootstrap se utiliza para crear un espaciado uniforme entre elementos?",
+            "options": [
+              "mx-{size} para espaciado horizontal y my-{size} para espaciado vertical.",
+              "spacing-{size} para ambos tipos de espaciado.",
+              "margin-{size} para espaciado exterior y padding-{size} para espaciado interior.",
+              "space-{size} para definir el espaciado en todos los lados."
+            ],
+            "answer": 0
+          }
+        ]
+      }
     }
   ]
 }
