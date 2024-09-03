@@ -66,7 +66,7 @@ export function showQuizResult() {
   const scoreElement = QuizResult(
     state.currentQuiz,
     state.score,
-    state.currentQuiz.questions.length
+    state.currentQuiz.questions[state.quizDifficulty].length
   );
   answersSection.appendChild(scoreElement);
   questionsSection.appendChild(QuizHeading("Quiz Completed", "You scored..."));
@@ -78,7 +78,7 @@ export function renderAnswerOptions() {
   const oldAnswersMenu = answersSection.querySelector(".answers-menu");
 
   const newAnswersMenu = AnswerMenu(
-    state.currentQuiz.questions[state.currentQuestion]
+    state.currentQuiz.questions[state.quizDifficulty][state.currentQuestion]
   );
 
   if (quizMenu) {
@@ -116,20 +116,27 @@ export function renderQuestionContainer() {
 }
 
 export function updateQuestionContent() {
-  const { currentQuiz, questionText, questionCount, currentQuestion } = state;
+  const {
+    currentQuiz,
+    questionText,
+    questionCount,
+    currentQuestion,
+    quizDifficulty,
+  } = state;
 
   if (
     !currentQuiz ||
     !currentQuiz.questions ||
-    currentQuiz.questions.length === 0
+    currentQuiz.questions[quizDifficulty].length === 0
   ) {
     console.error("Invalid quiz data.");
     return;
   }
 
-  questionText.textContent = currentQuiz.questions[currentQuestion].question;
+  questionText.textContent =
+    currentQuiz.questions[quizDifficulty][currentQuestion].question;
   questionCount.textContent = `Question ${currentQuestion + 1} of ${
-    currentQuiz.questions.length
+    currentQuiz.questions[quizDifficulty].length
   }`;
 }
 
@@ -151,13 +158,13 @@ export function updateProgressBar() {
   if (
     !currentQuiz ||
     !currentQuiz.questions ||
-    currentQuiz.questions.length === 0
+    currentQuiz.questions[state.quizDifficulty].length === 0
   ) {
     console.error("Cannot update progress bar: invalid quiz data.");
     return;
   }
 
-  const totalQuestions = currentQuiz.questions.length;
+  const totalQuestions = currentQuiz.questions[state.quizDifficulty].length;
   const percentage = ((currentQuestion + 1) / totalQuestions) * 100;
 
   progressBar.style.setProperty(

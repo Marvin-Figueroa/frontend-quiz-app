@@ -21,7 +21,10 @@ import {
 export function nextQuestion() {
   state.currentQuestion++;
 
-  if (state.currentQuestion >= state.currentQuiz.questions.length) {
+  if (
+    state.currentQuestion >=
+    state.currentQuiz.questions[state.quizDifficulty].length
+  ) {
     if (state.score >= 9) launchConfetti();
 
     const playAgainBtn = Button("Play Again");
@@ -48,6 +51,7 @@ export function resetQuiz() {
   state.questionCount = null;
   state.questionText = null;
   state.progressBar = null;
+  state.quizDifficulty = null;
 
   if (state.confettiInterval) {
     clearInterval(state.confettiInterval);
@@ -94,7 +98,8 @@ export function handleAnswerSubmission() {
   }
 
   const correctAnswerIndex =
-    state.currentQuiz.questions[state.currentQuestion].answer;
+    state.currentQuiz.questions[state.quizDifficulty][state.currentQuestion]
+      .answer;
   const isCorrect = state.selectedAnswer === correctAnswerIndex;
 
   if (isCorrect) {
@@ -109,7 +114,8 @@ export function handleAnswerSubmission() {
   });
 
   state.submitAnswerBtn.textContent =
-    state.currentQuestion === state.currentQuiz.questions.length - 1
+    state.currentQuestion ===
+    state.currentQuiz.questions[state.quizDifficulty].length - 1
       ? "Finish Quiz"
       : "Next Question";
   state.submitAnswerBtn.removeEventListener("click", handleAnswerSubmission);

@@ -10,4 +10,5 @@ export const state = {
   progressBar: null,
   confettiInterval: null,
   timeoutId: null,
+  quizDifficulty: null,
 };

@@ -180,6 +180,35 @@ body.dark-mode {
   color: var(--white);
 }
 
+/* Sweet Alert 2 Styles */
+
+.swal2-wide {
+  max-width: 400px;
+  padding: 0 10px 30px 10px;
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+.dark-mode .swal2-wide {
+  background-color: var(--slate-blue);
+  color: var(--white);
+}
+
+.swal2-title {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.swal2-content {
+  font-size: 18px;
+}
+
+.swal2-confirm,
+.swal2-cancel {
+  width: 100%;
+  font-size: 14px;
+}
+
 @media (max-width: 1024px) {
   body {
     background-position: top left;
@@ -228,11 +257,18 @@ body.dark-mode {
   }
 
   .app-header {
-    margin-bottom: 2rem;
+    margin-bottom: 4rem;
     width: 100%;
   }
 
   .app-main {
     width: 100%;
+  }
+
+  .swal2-wide {
+    max-width: 350px;
+    padding: 0 10px 30px 10px;
+    font-size: 16px;
+    line-height: 1.6;
   }
 }

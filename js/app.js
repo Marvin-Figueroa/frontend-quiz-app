@@ -4,7 +4,7 @@ import {
   createElementWithClass,
 } from "./ui.js";
 
-import { startQuiz } from "./quiz.js";
+import { showDifficultyMenu } from "./sweetalert2.js";
 
 export function initApp() {
   const app = document.querySelector("#app");
@@ -22,7 +22,7 @@ export function initApp() {
   const quizMenuButtons = document.querySelectorAll(".quiz-menu__btn");
   quizMenuButtons.forEach((button) =>
     button.addEventListener("click", () => {
-      startQuiz(button.id.split("-")[1]);
+      showDifficultyMenu(button.id.split("-")[1]);
     })
   );
 }

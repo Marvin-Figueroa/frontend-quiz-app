@@ -107,7 +107,7 @@
             "options": [
               "Especifica una imagen alternativa en caso de que la original no se cargue.",
               "Define una lista de recursos multimedia para el atributo <video>.",
-              "Permite especificar múltiples recursos de imagen para diferentes resoluciones y tamaños de pantalla.",
+              "Permite especificar múltiples recursos de imagen para diferentes resoluciones.",
               "Permite añadir texto alternativo a las imágenes."
             ],
             "answer": 2
@@ -313,14 +313,14 @@
         ],
         "advanced": [
           {
-            "question": "¿Cuál es la diferencia entre las propiedades 'margin' y 'padding' en CSS?",
+            "question": "¿Qué propiedad en CSS controla el espacio entre líneas de texto?",
             "options": [
-              "'margin' define el espacio exterior alrededor de un elemento, mientras que 'padding' define el espacio interior entre el borde del elemento y su contenido.",
-              "'padding' define el espacio exterior alrededor de un elemento, mientras que 'margin' define el espacio interior entre el borde del elemento y su contenido.",
-              "'margin' y 'padding' son sinónimos y pueden usarse indistintamente.",
-              "'margin' define el espacio interno del elemento, mientras que 'padding' define el espacio externo."
+              "letter-spacing",
+              "line-height",
+              "text-spacing",
+              "word-spacing"
             ],
-            "answer": 0
+            "answer": 1
           },
           {
             "question": "¿Qué hace la propiedad 'z-index' en CSS?",
@@ -576,7 +576,7 @@
               "'This is a comment",
               "//This is a comment",
               "<!--This is a comment-->",
-              "/* This is a comment */"
+              "/* This is a comment /*"
             ],
             "answer": 1
           },
@@ -698,14 +698,9 @@
             "answer": 2
           },
           {
-            "question": "¿Cuál es la diferencia entre 'null' y 'undefined' en JavaScript?",
-            "options": [
-              "'null' es un valor asignado explícitamente para indicar ausencia de valor, mientras que 'undefined' significa que una variable no ha sido inicializada.",
-              "'undefined' es un valor asignado explícitamente para indicar ausencia de valor, mientras que 'null' significa que una variable no ha sido inicializada.",
-              "'null' y 'undefined' son sinónimos y se usan de manera intercambiable.",
-              "'null' y 'undefined' tienen el mismo propósito, pero se usan en diferentes contextos."
-            ],
-            "answer": 0
+            "question": "¿Cuál es el resultado de la expresión '0.1 + 0.2 === 0.3' en JavaScript?",
+            "options": ["true", "false", "undefined", "NaN"],
+            "answer": 1
           },
           {
             "question": "¿Qué método de los arrays en JavaScript se usa para añadir uno o más elementos al final del array?",
@@ -938,11 +933,6 @@
             "answer": 2
           },
           {
-            "question": "¿Qué clase de Bootstrap se utiliza para crear un formulario en columnas?",
-            "options": ["row g-3", "form-row", "form-group", "col-form"],
-            "answer": 1
-          },
-          {
             "question": "¿Cómo se usa el componente 'alert' de Bootstrap para mostrar una alerta con el color de fondo personalizado?",
             "options": [
               "Modificando el estilo de la alerta usando la propiedad 'background-color'.",
@@ -981,16 +971,6 @@
               "text-align-center"
             ],
             "answer": 0
-          },
-          {
-            "question": "¿Cómo se pueden crear botones de grupo en Bootstrap?",
-            "options": [
-              "Utilizando la clase 'button-group' y añadiendo botones dentro de un contenedor.",
-              "Aplicando la clase 'btn-stack' para agrupar botones verticalmente.",
-              "Usando la clase 'btn-group' para agrupar varios botones.",
-              "Usando 'btn-container' para alinear varios botones en una fila."
-            ],
-            "answer": 2
           },
           {
             "question": "¿Qué clase de Bootstrap se utiliza para aplicar un espaciado vertical (padding) a un elemento?",

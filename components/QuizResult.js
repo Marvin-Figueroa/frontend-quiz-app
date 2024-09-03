@@ -8,7 +8,7 @@ function QuizResult(quiz, earnedScore, totalScore) {
   resultsContainer.className = "quiz-result";
 
   resultsContainer.appendChild(QuizTopic(quiz.title, quiz.icon));
-  resultsContainer.appendChild(QuizScore(earnedScore));
+  resultsContainer.appendChild(QuizScore(earnedScore, totalScore));
 
   const resultText = document.createElement("p");
   resultText.className = "quiz-result__text";
