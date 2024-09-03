@@ -1,7 +1,7 @@
 .answers-menu {
   display: flex;
   flex-direction: column;
-  gap: 20px;
+  gap: 15px;
   background-color: transparent;
   list-style: none;
 }
