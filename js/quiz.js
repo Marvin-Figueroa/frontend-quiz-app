@@ -25,7 +25,11 @@ export function nextQuestion() {
     state.currentQuestion >=
     state.currentQuiz.questions[state.quizDifficulty].length
   ) {
-    if (state.score >= 9) launchConfetti();
+    if (
+      state.score / state.currentQuiz.questions[state.quizDifficulty].length >
+      0.8
+    )
+      launchConfetti();
 
     const playAgainBtn = Button("Play Again");
     playAgainBtn.addEventListener("click", () => resetQuiz());
